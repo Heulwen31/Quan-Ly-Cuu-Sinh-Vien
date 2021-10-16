@@ -16,3 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/admin/info/create', 'App\Http\Controllers\Admin\AdminInfoController@create')->middleware('acceptedit::class');
+Route::post('/admin/info/store', 'App\Http\Controllers\Admin\AdminInfoController@store');
+
+Route::get('/admin/info', 'App\Http\Controllers\Admin\AdminInfoController@index');
+Route::get('/admin/info/{id}', 'App\Http\Controllers\Admin\AdminInfoController@show');
+
+Route::get('/admin/info/edit/{id}', 'App\Http\Controllers\Admin\AdminInfoController@edit');
+Route::patch('/admin/info/update/{id}', 'App\Http\Controllers\Admin\AdminInfoController@update');
+
+Route::delete('/admin/info/delete/{id}', 'App\Http\Controllers\Admin\AdminInfoController@destroy');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
