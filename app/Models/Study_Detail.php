@@ -10,4 +10,5 @@ class Study_Detail extends Model
     use HasFactory;
     
     public $timestamps = false;
+    protected $primaryKey = 'student_id';
 }

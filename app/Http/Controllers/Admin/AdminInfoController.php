@@ -43,6 +43,27 @@ class AdminInfoController extends Controller
      */
     public function store(Request $request)
     {
+        $message = [
+            'id.required' => "Mã sinh viên bắt buộc nhập."
+        ];
+
+        $this->validate($request, [
+            'id'=>'required|numeric',
+            'cccd'=>'required|numeric',
+            'name'=>'required',
+            'sex'=>'required',
+            'birth'=>'required',
+            'email'=>'required',
+            'phone'=>'required|numeric',
+            'address'=>'required',
+            'job'=>'required',
+            'consultant'=>'required',
+            'gpa'=>'required|numeric|max:4|min:0',
+            'cpa'=>'required|numeric|max:4|min:0',
+            'point_training'=>'required|numeric|max:100|min:0',
+            'course'=>'required'
+        ], $message);
+
         $student = new Student;
         $student->id = $request->id;
         $student->cccd = $request->cccd;
@@ -115,15 +136,15 @@ class AdminInfoController extends Controller
         $student->phone = $request->phone;
         $student->address = $request->address;
         $student->job = $request->job;
+        $student->save();
 
         $study_detail->consultant = $request->consultant;
         $study_detail->gpa = $request->gpa;
         $study_detail->cpa = $request->cpa;
         $study_detail->point_training = $request->point_training;
         $study_detail->course = $request->course;
-
-        $student->save();
         $study_detail->save();
+
         return redirect()->action('App\Http\Controllers\Admin\AdminInfoController@index');
     }
 
