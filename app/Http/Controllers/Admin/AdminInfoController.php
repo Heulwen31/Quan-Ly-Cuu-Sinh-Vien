@@ -44,7 +44,12 @@ class AdminInfoController extends Controller
     public function store(Request $request)
     {
         $message = [
-            'id.required' => "Mã sinh viên bắt buộc nhập."
+            'required' => "Ô không được để trống.",
+            'numeric' => "Giá trị nhập phải là số.",
+            'gpa.max' => "Giá trị nhập không được vượt quá 4.",
+            'cpa.max' => "Giá trị nhập không được vượt quá 4.",
+            'point_training.max' => "Giá trị nhập không được vượt quá 100.",
+            "min" => "Giá trị nhập không được nhỏ hơn 0.",
         ];
 
         $this->validate($request, [
