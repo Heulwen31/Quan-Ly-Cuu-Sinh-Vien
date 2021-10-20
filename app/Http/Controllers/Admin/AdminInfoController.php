@@ -49,7 +49,8 @@ class AdminInfoController extends Controller
             'gpa.max' => "Giá trị nhập không được vượt quá 4.",
             'cpa.max' => "Giá trị nhập không được vượt quá 4.",
             'point_training.max' => "Giá trị nhập không được vượt quá 100.",
-            "min" => "Giá trị nhập không được nhỏ hơn 0.",
+            'min' => "Giá trị nhập không được nhỏ hơn 0.",
+            'date_format' => "Vui lòng nhập đúng định dạng yyyy/mm/dd.",
         ];
 
         $this->validate($request, [
@@ -57,7 +58,7 @@ class AdminInfoController extends Controller
             'cccd'=>'required|numeric',
             'name'=>'required',
             'sex'=>'required',
-            'birth'=>'required',
+            'birth'=>'required|date_format:Y/m/d',
             'email'=>'required',
             'phone'=>'required|numeric',
             'address'=>'required',

@@ -17,7 +17,7 @@ class AcceptEdit
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->email == "admin@localhost.com") {
+        if (Auth::check() && Auth::user()->name == "Admin") {
             return $next($request);
         } else {
             return redirect("admin/info");
