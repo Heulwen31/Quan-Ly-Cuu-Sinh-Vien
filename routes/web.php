@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SocialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('/auth/login');
+    return view('/welcome');
 });
-
-Route::get('/admin/info/create', 'App\Http\Controllers\Admin\AdminInfoController@create')->middleware('acceptedit::class');
+// ->middleware('acceptedit::class')
+Route::get('/admin/info/create', 'App\Http\Controllers\Admin\AdminInfoController@create');
 Route::post('/admin/info/store', 'App\Http\Controllers\Admin\AdminInfoController@store');
 
 Route::get('/admin/info', 'App\Http\Controllers\Admin\AdminInfoController@index');
@@ -31,3 +32,11 @@ Route::delete('/admin/info/delete/{id}', 'App\Http\Controllers\Admin\AdminInfoCo
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('auth/facebook', [SocialController::class, 'facebookRedirect']);
+
+Route::get('auth/facebook/callback', [SocialController::class, 'loginWithFacebook']);
+
+Route::get('auth/google', [SocialController::class, 'loginWithGoogle']);
+
+Route::get('auth/google/callback', [SocialController::class, 'callbackFromGoogle']);

@@ -1,0 +1,31 @@
+.edit{
+    margin-top: 20px;
+    display: block;
+    width: 36%;
+    margin-left: 34.7%;
+}
+
+.edit-google{
+    margin-top: 15px;
+}
+
+.btn-login{
+    width: 54.6%;
+}
+
+.horizontal{
+    border: 1px solid rgb(194, 189, 189);
+    margin-top: 20px;
+    width: 36%;
+    margin-left: 34.7%;
+}
+
+.edit-link{
+    display: block;
+    margin-left: 5%;
+    margin-top: 16px;
+}
+
+.edit-link-register{
+    margin-top: -9px;
+}
