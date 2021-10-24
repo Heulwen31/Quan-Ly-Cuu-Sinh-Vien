@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('/auth/login');
+    return view('/welcome');
 });
-
-Route::get('/admin/info/create', 'App\Http\Controllers\Admin\AdminInfoController@create')->middleware('acceptedit::class');
+// ->middleware('acceptedit::class')
+Route::get('/admin/info/create', 'App\Http\Controllers\Admin\AdminInfoController@create');
 Route::post('/admin/info/store', 'App\Http\Controllers\Admin\AdminInfoController@store');
 
 Route::get('/admin/info', 'App\Http\Controllers\Admin\AdminInfoController@index');
