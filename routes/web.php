@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,3 +31,6 @@ Route::delete('/admin/info/delete/{id}', 'App\Http\Controllers\Admin\AdminInfoCo
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('/forum', 'App\Http\Controllers\ForumController@show');
