@@ -20,6 +20,9 @@ class CreateStudyDetailsTable extends Migration
             $table->double('cpa', 3, 2);
             $table->integer('point_training');
             $table->string('course');
+            $table->primary('student_id');
+            $table->foreign('student_id')->references('id')
+                ->on('students')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

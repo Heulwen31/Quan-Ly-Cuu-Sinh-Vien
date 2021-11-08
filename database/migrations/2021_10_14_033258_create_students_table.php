@@ -23,6 +23,7 @@ class CreateStudentsTable extends Migration
             $table->string('phone');
             $table->string('address');
             $table->string('job');
+            $table->primary('id');
         });
     }
 

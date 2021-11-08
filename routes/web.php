@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SocialController;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,3 +47,6 @@ Route::get('auth/google/callback', [SocialController::class, 'callbackFromGoogle
 Route::get('/homepage', function () {
     return view('/home_page');
 });
+
+Route::get('/forum', 'App\Http\Controllers\ForumController@show');
+
