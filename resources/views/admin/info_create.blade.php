@@ -9,131 +9,140 @@
     <link rel="stylesheet" type="text/css" href="{{ url('css/info_create.css') }}">
 </head>
 <body onUnLoad="removeValue()">
-    <form method="post" action="/admin/info/store">
+
+    @extends('home_page')
+
+    @section('homepage')
+
+    <h1>Thêm mới thông tin</h1>
+
+    <form method="post" action="/admin/info/store" class="form">
         @csrf
-        <div class="wrap wrap-title">
-            <h1 class="title-heading">Thêm dữ liệu</h1>
-            <p class="title-content">Bạn có thể thêm thông tin cho sinh viên với biểu mẫu này.</p>
-            <p class="title-required">*Bắt buộc</p>
+
+        <div class="column1">
+            <div class="wrap">
+                <label for="id" class="wrap-label">Mã số sinh viên</label>
+                <input type="text" name="id" id="id" 
+                    class="wrap-content" placeholder="Nhập" 
+                    onkeypress="return run(event, this.id)">
+                <span class="error-message">{{$errors->first('id')}}</span>
+            </div>
+            
+            <div class="wrap">
+                <label for="cccd" class="wrap-label">Số CCCD</label>
+                <input type="text" name="cccd" id="cccd"
+                    class="wrap-content" placeholder="Nhập" 
+                    onkeypress="return run(event, this.id)">
+                <span class="error-message">{{$errors->first('cccd')}}</span>
+            </div>
+            
+            <div class="wrap">
+                <label for="name" class="wrap-label">Họ tên</label>
+                <input type="text" name="name" id="name"
+                    class="wrap-content" placeholder="Nhập" 
+                    onkeypress="return run(event, this.id)"
+                    onblur="standardized(this.value)">
+                <span class="error-message">{{$errors->first('name')}}</span>
+            </div>
+            
+            <div class="wrap">
+                <label for="sex" class="wrap-label">Giới tính</label>
+                <input type="text" name="sex" id="sex"
+                    class="wrap-content" placeholder="Nhập" 
+                    onkeypress="return run(event, this.id)">
+                <span class="error-message">{{$errors->first('sex')}}</span>
+            </div>
+            
+            <div class="wrap">
+                <label for="birth" class="wrap-label">Ngày sinh</label>
+                <input type="date" name="birth" id="birth"
+                    class="wrap-content"
+                    onkeypress="return run(event, this.id)"
+                    onfocus="birthFocus()" 
+                    onblur="birthBlur()">
+                <span class="error-message">{{$errors->first('birth')}}</span>
+            </div>
         </div>
 
-        <div class="wrap">
-            <label for="id" class="wrap-label">Mã số sinh viên</label><br>
-            <input type="text" name="id" id="id" 
-                class="wrap-content" placeholder="Nhập" 
-                onkeypress="return run(event, this.id)">
-            <span class="error-message">{{$errors->first('id')}}</span>
+        <div class="column2">
+            <div class="wrap">
+                <label for="email" class="wrap-label">Email</label>
+                <input type="email" name="email" id="email"
+                    class="wrap-content" placeholder="Nhập" 
+                    onkeypress="return run(event, this.id)">
+                <span class="error-message">{{$errors->first('email')}}</span>
+            </div>
+            
+            <div class="wrap">
+                <label for="phone" class="wrap-label">Số điện thoại</label>
+                <input type="text" name="phone" id="phone"
+                    class="wrap-content" placeholder="Nhập" 
+                    onkeypress="return run(event, this.id)">
+                <span class="error-message">{{$errors->first('phone')}}</span>
+            </div>
+            <div class="wrap">
+                <label for="address" class="wrap-label">Địa chỉ</label>
+                <input type="text" name="address" id="address"
+                    class="wrap-content" placeholder="Nhập" 
+                    onkeypress="return run(event, this.id)">
+                <span class="error-message">{{$errors->first('address')}}</span>
+            </div>
+            
+            <div class="wrap">
+                <label for="job" class="wrap-label">Công việc</label>
+                <input type="text" name="job" id="job"
+                    class="wrap-content" placeholder="Nhập" 
+                    onkeypress="return run(event, this.id)">
+                <span class="error-message">{{$errors->first('job')}}</span>
+            </div>
+            
+            <div class="wrap">
+                <label for="consultant" class="wrap-label">Cố vấn học tập</label>
+                <input type="text" name="consultant" id="consultant"
+                    class="wrap-content" placeholder="Nhập" 
+                    onkeypress="return run(event, this.id)">
+                <span class="error-message">{{$errors->first('consultant')}}</span>
+            </div>
+            
         </div>
-        <br>
-        <div class="wrap">
-            <label for="cccd" class="wrap-label">Số CCCD</label><br>
-            <input type="text" name="cccd" id="cccd"
-                class="wrap-content" placeholder="Nhập" 
-                onkeypress="return run(event, this.id)">
-            <span class="error-message">{{$errors->first('cccd')}}</span>
+        
+        <div class="column3">
+            <div class="wrap">
+                <label for="gpa" class="wrap-label">Điểm GPA</label>
+                <input type="text" name="gpa" id="gpa"
+                    class="wrap-content" placeholder="Nhập" 
+                    onkeypress="return run(event, this.id)">
+                <span class="error-message">{{$errors->first('gpa')}}</span>
+            </div>
+            
+            <div class="wrap">
+                <label for="cpa" class="wrap-label">Điểm CPA</label>
+                <input type="text" name="cpa" id="cpa"
+                    class="wrap-content" placeholder="Nhập" 
+                    onkeypress="return run(event, this.id)">
+                <span class="error-message">{{$errors->first('cpa')}}</span>
+            </div>
+            
+            <div class="wrap">
+                <label for="point_training" class="wrap-label">Điểm rèn luyện</label>
+                <input type="text" name="point_training" id="point_training"
+                    class="wrap-content" placeholder="Nhập" 
+                    onkeypress="return run(event, this.id)">
+                <span class="error-message">{{$errors->first('point_training')}}</span>
+            </div>
+            
+            <div class="wrap">
+                <label for="course" class="wrap-label">Niên khóa</label>
+                <input type="text" name="course" id="course"
+                    class="wrap-content" placeholder="Nhập" 
+                    onkeypress="return run(event, this.id)">
+                <span class="error-message">{{$errors->first('course')}}</span>
+            </div>
+            
         </div>
-        <br>
-        <div class="wrap">
-            <label for="name" class="wrap-label">Họ tên</label><br>
-            <input type="text" name="name" id="name"
-                class="wrap-content" placeholder="Nhập" 
-                onkeypress="return run(event, this.id)"
-                onblur="standardized(this.value)">
-            <span class="error-message">{{$errors->first('name')}}</span>
-        </div>
-        <br>
-        <div class="wrap">
-            <label for="sex" class="wrap-label">Giới tính</label><br>
-            <input type="text" name="sex" id="sex"
-                class="wrap-content" placeholder="Nhập" 
-                onkeypress="return run(event, this.id)">
-            <span class="error-message">{{$errors->first('sex')}}</span>
-        </div>
-        <br>
-        <div class="wrap">
-            <label for="birth" class="wrap-label">Ngày sinh</label><br>
-            <input type="date" name="birth" id="birth"
-                class="wrap-content"
-                onkeypress="return run(event, this.id)"
-                onfocus="birthFocus()" 
-                onblur="birthBlur()">
-            <span class="error-message">{{$errors->first('birth')}}</span>
-        </div>
-        <br>
-        <div class="wrap">
-            <label for="email" class="wrap-label">Email</label><br>
-            <input type="email" name="email" id="email"
-                class="wrap-content" placeholder="Nhập" 
-                onkeypress="return run(event, this.id)">
-            <span class="error-message">{{$errors->first('email')}}</span>
-        </div>
-        <br>
-        <div class="wrap">
-            <label for="phone" class="wrap-label">Số điện thoại</label><br>
-            <input type="text" name="phone" id="phone"
-                class="wrap-content" placeholder="Nhập" 
-                onkeypress="return run(event, this.id)">
-            <span class="error-message">{{$errors->first('phone')}}</span>
-        </div>
-        <br>
-        <div class="wrap">
-            <label for="address" class="wrap-label">Địa chỉ</label><br>
-            <input type="text" name="address" id="address"
-                class="wrap-content" placeholder="Nhập" 
-                onkeypress="return run(event, this.id)">
-            <span class="error-message">{{$errors->first('address')}}</span>
-        </div>
-        <br>
-        <div class="wrap">
-            <label for="job" class="wrap-label">Công việc</label><br>
-            <input type="text" name="job" id="job"
-                class="wrap-content" placeholder="Nhập" 
-                onkeypress="return run(event, this.id)">
-            <span class="error-message">{{$errors->first('job')}}</span>
-        </div>
-        <br>
-        <div class="wrap">
-            <label for="consultant" class="wrap-label">Cố vấn học tập</label><br>
-            <input type="text" name="consultant" id="consultant"
-                class="wrap-content" placeholder="Nhập" 
-                onkeypress="return run(event, this.id)">
-            <span class="error-message">{{$errors->first('consultant')}}</span>
-        </div>
-        <br>
-        <div class="wrap">
-            <label for="gpa" class="wrap-label">Điểm GPA</label><br>
-            <input type="text" name="gpa" id="gpa"
-                class="wrap-content" placeholder="Nhập" 
-                onkeypress="return run(event, this.id)">
-            <span class="error-message">{{$errors->first('gpa')}}</span>
-        </div>
-        <br>
-        <div class="wrap">
-            <label for="cpa" class="wrap-label">Điểm CPA</label><br>
-            <input type="text" name="cpa" id="cpa"
-                class="wrap-content" placeholder="Nhập" 
-                onkeypress="return run(event, this.id)">
-            <span class="error-message">{{$errors->first('cpa')}}</span>
-        </div>
-        <br>
-        <div class="wrap">
-            <label for="point_training" class="wrap-label">Điểm rèn luyện</label><br>
-            <input type="text" name="point_training" id="point_training"
-                class="wrap-content" placeholder="Nhập" 
-                onkeypress="return run(event, this.id)">
-            <span class="error-message">{{$errors->first('point_training')}}</span>
-        </div>
-        <br>
-        <div class="wrap">
-            <label for="course" class="wrap-label">Niên khóa</label><br>
-            <input type="text" name="course" id="course"
-                class="wrap-content" placeholder="Nhập" 
-                onkeypress="return run(event, this.id)">
-            <span class="error-message">{{$errors->first('course')}}</span>
-        </div>
-        <br>
+
         <div class="wrap-submit">
-            <button type="Submit" class="submit" onclick="show()">Gửi</button>
+            <button type="Submit" class="submit" onclick="show()">Thêm</button>
         </div>
     </form>
 

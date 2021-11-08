@@ -44,8 +44,8 @@ Route::get('auth/google', [SocialController::class, 'loginWithGoogle']);
 
 Route::get('auth/google/callback', [SocialController::class, 'callbackFromGoogle']);
 
-Route::get('/homepage', function () {
-    return view('/home_page');
+Route::get('/homeadmin', function () {
+    return view('/admin/home_admin');
 });
 
 Route::get('/forum', 'App\Http\Controllers\ForumController@show');

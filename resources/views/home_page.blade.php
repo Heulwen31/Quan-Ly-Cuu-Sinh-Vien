@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -27,7 +27,7 @@
 <body>
     <!--  navbar-->
     <header>
-        <h4>QLDA</h4>
+        <h4>Quản lý cựu sinh viên</h4>
         <div class="profile">
             <div class="box">
                 <form action="/search" method="get"></form>
@@ -66,37 +66,37 @@
             <div class="navigation">
                 <ul>
                     <li class="list active">
-                        <a href="#">
+                        <a href="/homeadmin">
                             <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
-                            <span class="title">Home</span>
+                            <span class="title">Trang chủ</span>
                         </a>
                     </li>
-                    <li class="list">
+                    <li class="list active-user">
                         <a href="#">
                             <span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
-                            <span class="title">Profile</span>
+                            <span class="title">Tài khoản cá nhân</span>
+                        </a>
+                    </li>
+                    <li class="list active-view">
+                        <a href="/admin/info">
+                            <span class="icon"><i class="fa fa-list-alt" aria-hidden="true"></i></span>
+                            <span class="title">Xem thông tin cá nhân</span>
+                        </a>
+                    </li>
+                    <li class="list active-add">
+                        <a href="/admin/info/create">
+                            <span class="icon"><i class="fa fa-plus-square" aria-hidden="true"></i></span>
+                            <span class="title">Thêm mới thông tin</span>
+                        </a>
+                    </li>
+                    <li class="list active-forum">
+                        <a href="/forum">
+                            <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                            <span class="title">Diễn đàn</span>
                         </a>
                     </li>
                     <li class="list">
                         <a href="#">
-                            <span class="icon"><i class="fa fa-commenting" aria-hidden="true"></i></span>
-                            <span class="title">messages</span>
-                        </a>
-                    </li>
-                    <li class="list">
-                        <a href="#">
-                            <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
-                            <span class="title">setting</span>
-                        </a>
-                    </li>
-                    <li class="list">
-                        <a href="#">
-                            <span class="icon"><i class="fa fa-lock" aria-hidden="true"></i></span>
-                            <span class="title">Password</span>
-                        </a>
-                    </li>
-                    <li class="list">
-                        <a href="./Login.html">
                             <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
                             <span class="title">Sign out</span>
                         </a>
@@ -106,21 +106,7 @@
         </nav>
     </section>
 
-    @yield('homepage')
-
     <script>
-
-        let list = document.querySelectorAll('.list');
-        for (let i = 0; i < list.length; i++) {
-            list[i].onclick = function () {
-                let j = 0;
-                while (j < list.length) {
-                    list[j++].className = 'list';
-                }
-                list[i].className = 'list active';
-            }
-        }
-
         function changeColor() {
             var toggle = document.getElementById("toggle");
             var listColor = document.getElementsByClassName("title");
@@ -133,7 +119,7 @@
 
     </script>
 
-
+    @yield('homepage')
 </body>
 
 </html>

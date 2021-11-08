@@ -1,70 +1,70 @@
-body{
-    background-color: #ede7f6;
+* {
+    font-family: sans-serif; 
+    position: relative;
     box-sizing: border-box;
+  }
+
+h1{
+    position: absolute;
+    top: 7%;
+    left: 25%;
+    color: rgb(116, 175, 28);
+}  
+  
+.form{
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    display: flex;
 }
 
-form{
-    height: 1100px;
-    width: 600px;
-    margin: auto;
-}
-
-.wrap-title{
-    border-top: 8px solid blue;
-    margin-bottom: 20px;
-}
-
-.title-heading{
-    font-size: 40px;
-    font-weight: 700;
-}
-
-.title-required{
-    color: red;
-    margin-top: 20px;
+.column1, .column2{
+    margin-right: 100px;
 }
 
 .wrap{
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px 30px;
-}
-
-.wrap-label{
-    font-size: 18px;
-}
-
-.wrap-content{
-    margin-top: 40px;
-    margin-bottom: 10px;
-    border: none;
-    border-bottom: 1px solid rgb(216, 204, 204);
-    outline: none;
-    font-size: 16px;
-}
-
-input[type=date]{
-    width: 47%;
-    color: grey;
-}
-
-.submit{
-    margin: 20px 0px;
-    padding: 15px 40px;
-    background-color: blue;
-    font-size: 18px;
-    border-radius: 9px;
-    outline: none;
-    color: white;
-    cursor: pointer;
-}
-
-.wrap-submit{
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .error-message{
+    display: block;
     color: red;
-    margin-left: 80px;
-    font-size: 14px;
+    margin-top: 7px;
+    margin-left: 1.6px;
+}
+
+.wrap-label{
+    font-size: 20px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.wrap-content{
+    padding: 7px 15px;
+    font-size: 18px;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+input[type=date]{
+    width: 100%;
+}
+
+.wrap-submit{
+    position: absolute;
+    top: 100%;
+}
+
+.submit{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: chocolate;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    color: white;
+}
+
+.active-add {
+    background-color: #ea1d63;
 }

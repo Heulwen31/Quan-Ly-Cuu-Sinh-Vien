@@ -7,12 +7,13 @@
 .wrap{
     position: absolute;
     top: 10%;
-    left: 11.5%;
+    left: 14%;
 }
 
 h1{
     text-align: left;
     font-size: 50px;
+    color: rgb(116, 175, 28);
 }
 
 .line{
@@ -47,7 +48,7 @@ h1{
 
 .content-table th:last-child,
 .content-table td:last-child {
-    width: 420px;
+    width: 370px;
 }
 
 .content-table tbody tr {

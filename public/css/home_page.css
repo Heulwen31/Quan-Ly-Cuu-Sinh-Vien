@@ -32,6 +32,9 @@ header {
     align-items: center;
 }
 
+h4{
+    transform: translate(-40px, 5px);
+}
 
 .box {
     position: relative;
@@ -114,7 +117,7 @@ section::after {
 
 .navigation {
     position: fixed;
-    width: 200px;
+    width: 230px;
     height: 100%;
     background: #7b268a;
     transition: width .5s;
@@ -146,9 +149,9 @@ section::after {
 .navigation ul li:hover {
     background: #a5697d;
 }
-.navigation  ul li.active {
+/* .navigation ul li.active {
     background: #ea1d63;
-}
+} */
 .navigation  ul li a {
     position: relative;
     display: block;
@@ -178,5 +181,6 @@ section::after {
     line-height: 60px;
     text-align: start;
     white-space: nowrap;
+    transform: translateY(-1.5px);
 }
 /* .----------------------. */
