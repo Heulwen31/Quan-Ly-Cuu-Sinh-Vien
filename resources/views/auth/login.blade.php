@@ -5,19 +5,19 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header">{{ __('Đăng nhập') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Email') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" 
                                     name="email" value="{{ old('email') }}" required autocomplete="email" 
-                                    autofocus placeholder="Enter Email Addresss">
+                                    autofocus placeholder="Nhập email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -28,12 +28,12 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Mật khẩu') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" 
                                     name="password" required autocomplete="current-password"
-                                    placeholder="Password">
+                                    placeholder="Nhập mật khẩu">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -50,7 +50,7 @@
                                         id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
+                                        {{ __('Ghi nhớ') }}
                                     </label>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary btn-login">
-                                    {{ __('Login') }}
+                                    {{ __('Đăng nhập') }}
                                 </button>
                             </div>
                         </div>
@@ -68,11 +68,11 @@
 
                         <div class="wrap-link">
                             <a href="{{ url('auth/facebook') }}" class="btn btn-social btn-facebook edit">
-                                <span class="fa fa-facebook"></span> Sign in with Facebook
+                                <span class="fa fa-facebook"></span> Đăng nhập với Facebook
                             </a>
 
                             <a href="{{ url('auth/google') }}" class="btn btn-social btn-google edit edit-google">
-                                <span class="fa fa-google"></span> Sign in with Google
+                                <span class="fa fa-google"></span> Đăng nhập với Google
                             </a>
                         </div>
 
@@ -81,12 +81,12 @@
                         <div>
                             @if (Route::has('password.request'))
                                 <a class="btn btn-link edit-link" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
+                                    {{ __('Quên mật khẩu?') }}
                                 </a>
                             @endif
 
                             <a class="btn btn-link edit-link edit-link-register" href="{{ url('register') }}">
-                                {{ __('Creat an Account!') }}
+                                {{ __('Tạo tài khoản mới!') }}
                             </a>
                         </div>
                     </form>

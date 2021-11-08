@@ -1,0 +1,106 @@
+* {
+    font-family: sans-serif; 
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+.wrap{
+    position: absolute;
+    top: 10%;
+    left: 11.5%;
+}
+
+h1{
+    text-align: left;
+    font-size: 50px;
+}
+
+.line{
+    border: 1px solid #46f7d3;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.content-table {
+    border-collapse: collapse;
+    font-size: 16px;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.content-table th:last-child,
+.content-table td:last-child {
+    width: 300px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+
+.tools form{
+    display: inline-block;
+}
+
+a{
+    text-decoration: none;
+}
+
+.link-id:visited{
+    color: blue;
+}
+
+.tools-link{
+    background-color: red;
+    margin-right: 10px;
+    color: white;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.tools-link-edit{
+    background-color: blue;
+}
+
+.tools-link-delete{
+    border: none;
+    font-size: 17px;
+    width: 65px;
+    height: 32px;
+    background-color: brown;
+    cursor: pointer;
+}
+
+.tools-link:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.add{
+    margin-bottom: 20px;
+}
+

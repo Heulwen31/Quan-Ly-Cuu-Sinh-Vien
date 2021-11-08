@@ -1,0 +1,182 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body {
+    min-height: 100vh;
+    background-color: #f4f4fb;
+    /* background: white; */
+    overflow: hidden;
+}
+/*.----------------------.*/
+header {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 2;
+    padding-left: 6rem;
+}
+.profile {
+    display: flex;
+    max-width: 600px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.box {
+    position: relative;
+    padding-right: 30px;
+}
+
+.stext {
+    width: 300px;
+    height: 50px;
+    background: #b3b3be;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: black;
+    padding-left: 45px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.fa-search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 16px;
+    margin-top: 16px;
+    z-index: 1;
+    color: black;
+ }
+
+.profile-image {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding-left: -40px;
+    /* padding-right: 5px; */
+}
+.item >i {
+    padding-right: 10px;
+}
+.xy >a:hover {
+    background: grey;
+}
+.xy >a:active {
+    background: blue;
+}
+
+.abc {
+    margin-left: 10px;
+    margin-right: 10px;
+    background: #b3b3be;
+    color: black;
+}
+
+
+
+
+.side-toggle {
+    position: fixed;
+    z-index: 2;
+    top: 13px;
+    left: 20px;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*---------------- */
+nav {
+  float: left;
+  width: 15%; 
+}
+
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.navigation {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #7b268a;
+    transition: width .5s;
+}
+
+#toggle:checked ~ .navigation {
+    width: 60px;
+}
+
+#toggle:checked ~ .navigation  {
+    width: 60px;
+}
+
+.navigation  ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* padding-left: 5px; */
+    padding-top: 32px;
+}
+.navigation  ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.navigation ul li:hover {
+    background: #a5697d;
+}
+.navigation  ul li.active {
+    background: #ea1d63;
+}
+.navigation  ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+
+.navigation  ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.navigation  ul li a .icon .fa {
+    font-size: 25px;
+}
+.navigation  ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0px 3px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+/* .----------------------. */

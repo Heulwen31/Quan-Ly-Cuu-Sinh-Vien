@@ -6,120 +6,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create</title>
 
-    <style type="text/css">
-        .error-message{
-            color: red;
-            margin-left: 5px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="{{ url('css/info_create.css') }}">
 </head>
 <body onUnLoad="removeValue()">
     <form method="post" action="/admin/info/store">
         @csrf
-        <div>
-            <label for="id">Ma so sinh vien</label><br>
-            <input type="text" name="id" id="id"
+        <div class="wrap wrap-title">
+            <h1 class="title-heading">Thêm dữ liệu</h1>
+            <p class="title-content">Bạn có thể thêm thông tin cho sinh viên với biểu mẫu này.</p>
+            <p class="title-required">*Bắt buộc</p>
+        </div>
+
+        <div class="wrap">
+            <label for="id" class="wrap-label">Mã số sinh viên</label><br>
+            <input type="text" name="id" id="id" 
+                class="wrap-content" placeholder="Nhập" 
                 onkeypress="return run(event, this.id)">
             <span class="error-message">{{$errors->first('id')}}</span>
         </div>
         <br>
-        <div>
-            <label for="cccd">So CCCD</label><br>
+        <div class="wrap">
+            <label for="cccd" class="wrap-label">Số CCCD</label><br>
             <input type="text" name="cccd" id="cccd"
+                class="wrap-content" placeholder="Nhập" 
                 onkeypress="return run(event, this.id)">
             <span class="error-message">{{$errors->first('cccd')}}</span>
         </div>
         <br>
-        <div>
-            <label for="name">Ho ten</label><br>
+        <div class="wrap">
+            <label for="name" class="wrap-label">Họ tên</label><br>
             <input type="text" name="name" id="name"
+                class="wrap-content" placeholder="Nhập" 
                 onkeypress="return run(event, this.id)"
                 onblur="standardized(this.value)">
             <span class="error-message">{{$errors->first('name')}}</span>
         </div>
         <br>
-        <div>
-            <label for="sex">Gioi tinh</label><br>
+        <div class="wrap">
+            <label for="sex" class="wrap-label">Giới tính</label><br>
             <input type="text" name="sex" id="sex"
+                class="wrap-content" placeholder="Nhập" 
                 onkeypress="return run(event, this.id)">
             <span class="error-message">{{$errors->first('sex')}}</span>
         </div>
         <br>
-        <div>
-            <label for="birth">Ngay sinh</label><br>
-            <input type="text" name="birth" id="birth"
+        <div class="wrap">
+            <label for="birth" class="wrap-label">Ngày sinh</label><br>
+            <input type="date" name="birth" id="birth"
+                class="wrap-content"
                 onkeypress="return run(event, this.id)"
                 onfocus="birthFocus()" 
-                onblur="birthBlur()"
-                onkeyup="autoAppend(this.value)">
+                onblur="birthBlur()">
             <span class="error-message">{{$errors->first('birth')}}</span>
         </div>
         <br>
-        <div>
-            <label for="email">Email</label><br>
+        <div class="wrap">
+            <label for="email" class="wrap-label">Email</label><br>
             <input type="email" name="email" id="email"
+                class="wrap-content" placeholder="Nhập" 
                 onkeypress="return run(event, this.id)">
             <span class="error-message">{{$errors->first('email')}}</span>
         </div>
         <br>
-        <div>
-            <label for="phone">So dien thoai</label><br>
+        <div class="wrap">
+            <label for="phone" class="wrap-label">Số điện thoại</label><br>
             <input type="text" name="phone" id="phone"
+                class="wrap-content" placeholder="Nhập" 
                 onkeypress="return run(event, this.id)">
             <span class="error-message">{{$errors->first('phone')}}</span>
         </div>
         <br>
-        <div>
-            <label for="address">Dia chi</label><br>
+        <div class="wrap">
+            <label for="address" class="wrap-label">Địa chỉ</label><br>
             <input type="text" name="address" id="address"
+                class="wrap-content" placeholder="Nhập" 
                 onkeypress="return run(event, this.id)">
             <span class="error-message">{{$errors->first('address')}}</span>
         </div>
         <br>
-        <div>
-            <label for="job">Cong viec</label><br>
+        <div class="wrap">
+            <label for="job" class="wrap-label">Công việc</label><br>
             <input type="text" name="job" id="job"
+                class="wrap-content" placeholder="Nhập" 
                 onkeypress="return run(event, this.id)">
             <span class="error-message">{{$errors->first('job')}}</span>
         </div>
         <br>
-        <div>
-            <label for="consultant">Co van hoc tap</label><br>
+        <div class="wrap">
+            <label for="consultant" class="wrap-label">Cố vấn học tập</label><br>
             <input type="text" name="consultant" id="consultant"
+                class="wrap-content" placeholder="Nhập" 
                 onkeypress="return run(event, this.id)">
             <span class="error-message">{{$errors->first('consultant')}}</span>
         </div>
         <br>
-        <div>
-            <label for="gpa">GPA</label><br>
+        <div class="wrap">
+            <label for="gpa" class="wrap-label">Điểm GPA</label><br>
             <input type="text" name="gpa" id="gpa"
+                class="wrap-content" placeholder="Nhập" 
                 onkeypress="return run(event, this.id)">
             <span class="error-message">{{$errors->first('gpa')}}</span>
         </div>
         <br>
-        <div>
-            <label for="cpa">CPA</label><br>
+        <div class="wrap">
+            <label for="cpa" class="wrap-label">Điểm CPA</label><br>
             <input type="text" name="cpa" id="cpa"
+                class="wrap-content" placeholder="Nhập" 
                 onkeypress="return run(event, this.id)">
             <span class="error-message">{{$errors->first('cpa')}}</span>
         </div>
         <br>
-        <div>
-            <label for="point_training">Diem ren luyen</label><br>
+        <div class="wrap">
+            <label for="point_training" class="wrap-label">Điểm rèn luyện</label><br>
             <input type="text" name="point_training" id="point_training"
+                class="wrap-content" placeholder="Nhập" 
                 onkeypress="return run(event, this.id)">
             <span class="error-message">{{$errors->first('point_training')}}</span>
         </div>
         <br>
-        <div>
-            <label for="course">Nien khoa</label><br>
+        <div class="wrap">
+            <label for="course" class="wrap-label">Niên khóa</label><br>
             <input type="text" name="course" id="course"
+                class="wrap-content" placeholder="Nhập" 
                 onkeypress="return run(event, this.id)">
             <span class="error-message">{{$errors->first('course')}}</span>
         </div>
         <br>
-        <div>
-            <button type="Submit">Submit</button>
+        <div class="wrap-submit">
+            <button type="Submit" class="submit" onclick="show()">Gửi</button>
         </div>
     </form>
 
@@ -201,12 +215,6 @@
             }
         }
         
-        function autoAppend(string) {
-            if (string.length == 4 || string.length == 7) {
-                birth.value = string + '/';
-            }
-        }
-
         function standardized(string) {
             string = string.trim().replace(/\s+/g, ' ');
             var split = string.toLowerCase().split(" ");
@@ -217,12 +225,14 @@
         }
 
         function removeValue() {
-            alert("OK");
-            console.log("OK");
             var list = document.getElementsByTagName("INPUT");
             for (var i = 0; i < list.length; i++) {
                 list[i].value = "";
             }
+        }
+
+        function show() {
+            alert($warning);
         }
     </script>
 </body>

@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Student;
 use App\Models\Study_Detail;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class AdminInfoController extends Controller
 {
@@ -58,7 +60,7 @@ class AdminInfoController extends Controller
             'cccd'=>'required|numeric',
             'name'=>'required',
             'sex'=>'required',
-            'birth'=>'required|date_format:Y/m/d',
+            'birth'=>'required',
             'email'=>'required',
             'phone'=>'required|numeric',
             'address'=>'required',
@@ -70,28 +72,43 @@ class AdminInfoController extends Controller
             'course'=>'required'
         ], $message);
 
-        $student = new Student;
-        $student->id = $request->id;
-        $student->cccd = $request->cccd;
-        $student->name = $request->name;
-        $student->sex = $request->sex;
-        $student->birth = $request->birth;
-        $student->email = $request->email;
-        $student->phone = $request->phone;
-        $student->address = $request->address;
-        $student->job = $request->job;
+        $isStudent = Student::where('id', $request->id)->first();
 
-        $student->save();
+        if (!$isStudent) {
+            $student = new Student;
+            $student->id = $request->id;
+            $student->cccd = $request->cccd;
+            $student->name = $request->name;
+            $student->sex = $request->sex;
+            $student->birth = $request->birth;
+            $student->email = $request->email;
+            $student->phone = $request->phone;
+            $student->address = $request->address;
+            $student->job = $request->job;
 
-        $study_detail = new Study_Detail;
-        $study_detail->student_id = $request->id;
-        $study_detail->consultant = $request->consultant;
-        $study_detail->gpa = $request->gpa;
-        $study_detail->cpa = $request->cpa;
-        $study_detail->point_training = $request->point_training;
-        $study_detail->course = $request->course;
+            $student->save();
 
-        $study_detail->save();
+            $study_detail = new Study_Detail;
+            $study_detail->student_id = $request->id;
+            $study_detail->consultant = $request->consultant;
+            $study_detail->gpa = $request->gpa;
+            $study_detail->cpa = $request->cpa;
+            $study_detail->point_training = $request->point_training;
+            $study_detail->course = $request->course;
+
+            $study_detail->save();
+        } else {
+            $warning = "Mã sinh viên bị trùng. Bạn cần nhập lại.";
+            return view('/admin/info_create', compact('warning'));
+        }
+
+        // $user = new User;
+        // $user->name = $request->name;
+        // $user->email = $request->email;
+        // $user->password = bcrypt('12345678@');
+
+        // $user->save();
+
         return redirect()->action('App\Http\Controllers\Admin\AdminInfoController@create');
     }
 

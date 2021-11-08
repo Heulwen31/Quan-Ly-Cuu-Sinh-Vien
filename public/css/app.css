@@ -24,8 +24,13 @@
     display: block;
     margin-left: 5%;
     margin-top: 16px;
+    border: none;
 }
 
 .edit-link-register{
     margin-top: -9px;
+}
+
+.edit-link:visited, .edit-link:active{
+    border: none;
 }
