@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\InsertContentController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,3 +52,5 @@ Route::get('/homeadmin', function () {
 
 Route::get('/forum', 'App\Http\Controllers\ForumController@show');
 
+Route::get('index', [InsertContentController::class, 'index']);
+Route::post('add', [InsertContentController::class, 'add']);
