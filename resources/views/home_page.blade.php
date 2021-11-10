@@ -36,13 +36,12 @@
                 <i class="fa fa-search"></i>
             </div>
 
-            <img class="profile-image"
-                src="https://i.vietgiaitri.com/2019/6/8/real-madrid-chieu-mo-thanh-cong-eden-hazard-2f1efa.jpg" alt="">
+            <img class="profile-image" src="{{ url('img/user.png') }}" alt="">
             
             <div class="dropdown">
                 <a class="btn btn-secondary dropdown-toggle abc" href="#" role="button" id="dropdownMenuLink"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Eden hazard
+                    {{ Auth::user()->name }}
                 </a>
 
                 <div class="dropdown-menu xy" aria-labelledby="dropdownMenuLink">
