@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\InsertContentController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,3 +49,7 @@ Route::get('/forum', 'App\Http\Controllers\ForumController@show');
 
 Route::get('index', [InsertContentController::class, 'index']);
 Route::post('add', [InsertContentController::class, 'add']);
+
+Route::get('file-import-export', [UserController::class, 'fileImportExport']);
+Route::post('file-import', [UserController::class, 'fileImport'])->name('file-import');
+Route::get('file-export', [UserController::class, 'fileExport'])->name('file-export');

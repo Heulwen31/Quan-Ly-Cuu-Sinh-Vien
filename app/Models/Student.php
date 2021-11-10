@@ -9,9 +9,22 @@ class Student extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'id',
+        'cccd', 
+        'name', 
+        'sex', 
+        'email', 
+        'birth',
+        'phone', 
+        'address', 
+        'job',
+    ];
+
     public $timestamps = false;
 
-    public function study() {
+    public function study()
+    {
         return $this->hasOne('App\Models\Study_Detail');
     }
 }
