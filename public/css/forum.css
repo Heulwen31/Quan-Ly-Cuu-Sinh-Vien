@@ -1,15 +1,14 @@
 * {
-    font-family: sans-serif; 
-    position: relative;
-    box-sizing: border-box;
-  }
+  position: relative;
+  box-sizing: border-box;
+}
   
 .wrap{
-    position: absolute;
-    top: 10%;
-    left: 14%;
+  position: absolute;
+  top: 10%;
+  left: 14%;
 }
 
 .active-forum {
-  background-color: #ea1d63;
+  background-color: #806cee;
 }

@@ -76,11 +76,6 @@
         
         <div class="column3">
             <div class="wrap">
-                <label for="gpa" class="wrap-label">Điểm GPA</label>
-                <input class="wrap-input" type="text" name="gpa" value="{{$study_detail->gpa}}">
-            </div>
-            
-            <div class="wrap">
                 <label for="cpa" class="wrap-label">Điểm CPA</label>
                 <input class="wrap-input" type="text" name="cpa" value="{{$study_detail->cpa}}">
             </div>
@@ -88,6 +83,11 @@
             <div class="wrap">
                 <label for="point_training" class="wrap-label">Điểm rèn luyện</label>
                 <input class="wrap-input" type="text" name="point_training" value="{{$study_detail->point_training}}">
+            </div>
+
+            <div class="wrap">
+                <label for="faculty" class="wrap-label">Khoa</label>
+                <input class="wrap-input" type="text" name="faculty" value="{{$study_detail->faculty}}">
             </div>
             
             <div class="wrap">

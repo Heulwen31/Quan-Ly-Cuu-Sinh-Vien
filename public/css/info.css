@@ -1,5 +1,4 @@
 * {
-    font-family: sans-serif; 
     position: relative;
     box-sizing: border-box;
   }
@@ -75,7 +74,7 @@ a{
 }
 
 .tools-link{
-    background-color: red;
+    background-color: rgb(161, 111, 18);
     margin-right: 10px;
     color: white;
     font-size: 18px;
@@ -106,5 +105,5 @@ a{
 }
 
 .active-view {
-    background-color: #ea1d63;
+    background-color: #806cee;
 }

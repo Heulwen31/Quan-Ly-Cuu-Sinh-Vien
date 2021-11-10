@@ -1,5 +1,4 @@
 * {
-    font-family: sans-serif; 
     position: relative;
     box-sizing: border-box;
   }
@@ -66,5 +65,5 @@ input[type=date]{
 }
 
 .active-add {
-    background-color: #ea1d63;
+    background-color: #806cee;
 }

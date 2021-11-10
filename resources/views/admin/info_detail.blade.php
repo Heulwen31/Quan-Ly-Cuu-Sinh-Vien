@@ -29,9 +29,9 @@
                 <tr>
                     <th>Mã sinh viên</th>
                     <th>Cố vấn học tập</th>
-                    <th>GPA</th>
                     <th>CPA</th>
                     <th>Điểm rèn luyện</th>
+                    <th>Khoa</th>
                     <th>Niên khóa</th>
                     <th>Công cụ</th>
                 </tr>
@@ -40,9 +40,9 @@
                 <tr>
                     <td>{{ $study_detail->student_id }}</td>
                     <td>{{ $study_detail->consultant }}</td>
-                    <td>{{ $study_detail->gpa }}</td>
                     <td>{{ $study_detail->cpa }}</td>
                     <td>{{ $study_detail->point_training }}</td>
+                    <td>{{ $study_detail->faculty }}</td>
                     <td>{{ $study_detail->course }}</td>
                     <td class="tools">
                         <a href="/admin/info/edit/{{$study_detail->student_id}}" class="tools-link tools-link-edit">

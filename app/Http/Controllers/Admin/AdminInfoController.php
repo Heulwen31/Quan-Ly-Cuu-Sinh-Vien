@@ -48,7 +48,6 @@ class AdminInfoController extends Controller
         $message = [
             'required' => "Ô không được để trống.",
             'numeric' => "Giá trị nhập phải là số.",
-            'gpa.max' => "Giá trị nhập không được vượt quá 4.",
             'cpa.max' => "Giá trị nhập không được vượt quá 4.",
             'point_training.max' => "Giá trị nhập không được vượt quá 100.",
             'min' => "Giá trị nhập không được nhỏ hơn 0.",
@@ -66,7 +65,7 @@ class AdminInfoController extends Controller
             'address'=>'required',
             'job'=>'required',
             'consultant'=>'required',
-            'gpa'=>'required|numeric|max:4|min:0',
+            'faculty'=>'required',
             'cpa'=>'required|numeric|max:4|min:0',
             'point_training'=>'required|numeric|max:100|min:0',
             'course'=>'required'
@@ -91,23 +90,24 @@ class AdminInfoController extends Controller
             $study_detail = new Study_Detail;
             $study_detail->student_id = $request->id;
             $study_detail->consultant = $request->consultant;
-            $study_detail->gpa = $request->gpa;
             $study_detail->cpa = $request->cpa;
             $study_detail->point_training = $request->point_training;
+            $study_detail->faculty = $request->faculty;
             $study_detail->course = $request->course;
+
+            $user = new User;
+            $user->name = $request->name;
+            $user->email = $request->id . '@vnu.edu.vn';
+            $user->password = bcrypt('12345678');   
+            $user->id_student = $request->id;
+
+            $user->save();
 
             $study_detail->save();
         } else {
             $warning = "Mã sinh viên bị trùng. Bạn cần nhập lại.";
             return view('/admin/info_create', compact('warning'));
         }
-
-        // $user = new User;
-        // $user->name = $request->name;
-        // $user->email = $request->email;
-        // $user->password = bcrypt('12345678@');
-
-        // $user->save();
 
         return redirect()->action('App\Http\Controllers\Admin\AdminInfoController@create');
     }
@@ -162,9 +162,9 @@ class AdminInfoController extends Controller
         $student->save();
 
         $study_detail->consultant = $request->consultant;
-        $study_detail->gpa = $request->gpa;
         $study_detail->cpa = $request->cpa;
         $study_detail->point_training = $request->point_training;
+        $study_detail->faculty = $request->faculty;
         $study_detail->course = $request->course;
         $study_detail->save();
 

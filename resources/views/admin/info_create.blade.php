@@ -108,14 +108,6 @@
         
         <div class="column3">
             <div class="wrap">
-                <label for="gpa" class="wrap-label">Điểm GPA</label>
-                <input type="text" name="gpa" id="gpa"
-                    class="wrap-content" placeholder="Nhập" 
-                    onkeypress="return run(event, this.id)">
-                <span class="error-message">{{$errors->first('gpa')}}</span>
-            </div>
-            
-            <div class="wrap">
                 <label for="cpa" class="wrap-label">Điểm CPA</label>
                 <input type="text" name="cpa" id="cpa"
                     class="wrap-content" placeholder="Nhập" 
@@ -131,6 +123,14 @@
                 <span class="error-message">{{$errors->first('point_training')}}</span>
             </div>
             
+            <div class="wrap">
+                <label for="faculty" class="wrap-label">Khoa</label>
+                <input type="text" name="faculty" id="gpa"
+                    class="wrap-content" placeholder="Nhập" 
+                    onkeypress="return run(event, this.id)">
+                <span class="error-message">{{$errors->first('faculty')}}</span>
+            </div>
+
             <div class="wrap">
                 <label for="course" class="wrap-label">Niên khóa</label>
                 <input type="text" name="course" id="course"

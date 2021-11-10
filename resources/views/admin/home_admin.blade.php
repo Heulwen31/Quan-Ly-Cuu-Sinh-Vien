@@ -12,5 +12,7 @@
     @extends('home_page')
 
     @section('homepage')
+
+    @endsection
 </body>
 </html>

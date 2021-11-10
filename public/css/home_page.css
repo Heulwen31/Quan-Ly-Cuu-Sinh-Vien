@@ -21,7 +21,7 @@ header {
     height: 55px;
     top: 0;
     left: 0;
-    background-color: #fff;
+    background-color: #b5ecf3;
     z-index: 2;
     padding-left: 6rem;
 }
@@ -119,7 +119,7 @@ section::after {
     position: fixed;
     width: 230px;
     height: 100%;
-    background: #7b268a;
+    background-image: linear-gradient(45deg, #6a6c79, #1c3eff);
     transition: width .5s;
 }
 
@@ -147,11 +147,9 @@ section::after {
     border-bottom-left-radius: 20px;
 }
 .navigation ul li:hover {
-    background: #a5697d;
+    background: #806cee;
 }
-/* .navigation ul li.active {
-    background: #ea1d63;
-} */
+
 .navigation  ul li a {
     position: relative;
     display: block;

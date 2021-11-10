@@ -1,5 +1,4 @@
 * {
-    font-family: sans-serif; 
     position: relative;
     box-sizing: border-box;
   }
@@ -111,4 +110,8 @@ a{
 .btn-view:active{
     text-decoration: none;
     color: brown;
+}
+
+.active-view {
+    background-color: #806cee;
 }

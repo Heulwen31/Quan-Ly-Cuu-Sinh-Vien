@@ -16,9 +16,9 @@ use App\Http\Controllers\InsertContentController;
 */
 
 Route::get('/', function () {
-    return view('/welcome');
+    return view('/auth/login');
 });
-// ->middleware('acceptedit::class')
+
 
 //Handle route info
 Route::get('/admin/info/create', 'App\Http\Controllers\Admin\AdminInfoController@create');
@@ -32,20 +32,14 @@ Route::patch('/admin/info/update/{id}', 'App\Http\Controllers\Admin\AdminInfoCon
 
 Route::delete('/admin/info/delete/{id}', 'App\Http\Controllers\Admin\AdminInfoController@destroy');
 
+
 //Auth route
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//Social auth route
-Route::get('auth/facebook', [SocialController::class, 'facebookRedirect']);
 
-Route::get('auth/facebook/callback', [SocialController::class, 'loginWithFacebook']);
-
-Route::get('auth/google', [SocialController::class, 'loginWithGoogle']);
-
-Route::get('auth/google/callback', [SocialController::class, 'callbackFromGoogle']);
-
+//
 Route::get('/homeadmin', function () {
     return view('/admin/home_admin');
 });
