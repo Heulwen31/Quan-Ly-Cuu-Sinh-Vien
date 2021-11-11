@@ -17,6 +17,8 @@
     @section('homepage')
 
     <div class="wrap">
+        <a href="{{ url('index') }}">Thêm chủ đề</a>
+
         <h1>Cac chu de cua dien dan </h1>
         @foreach ($contents as $content)
         <div>

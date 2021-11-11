@@ -95,6 +95,8 @@ class AdminInfoController extends Controller
             $study_detail->faculty = $request->faculty;
             $study_detail->course = $request->course;
 
+            $study_detail->save();
+
             $user = new User;
             $user->name = $request->name;
             $user->email = $request->id . '@vnu.edu.vn';
@@ -103,7 +105,6 @@ class AdminInfoController extends Controller
 
             $user->save();
 
-            $study_detail->save();
         } else {
             $warning = "Mã sinh viên bị trùng. Bạn cần nhập lại.";
             return view('/admin/info_create', compact('warning'));

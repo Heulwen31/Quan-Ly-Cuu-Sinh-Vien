@@ -48,3 +48,6 @@ Route::get('/forum', 'App\Http\Controllers\ForumController@show');
 
 Route::get('index', [InsertContentController::class, 'index']);
 Route::post('add', [InsertContentController::class, 'add']);
+
+Route::get('/account', 'App\Http\Controllers\ViewAccountController@show');
+Route::patch('/account/{id}', 'App\Http\Controllers\RePassController@update');

@@ -45,13 +45,13 @@
                 </a>
 
                 <div class="dropdown-menu xy" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item item" href="#"><i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+                    <a class="dropdown-item item" href="#"><i class="fa fa-user" aria-hidden="true"></i>Tài khoản</a>
                     <a class="dropdown-item item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     
                             <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
-                            <span class="title">Sign out</span>
+                            <span class="title">Đăng xuất</span>
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
@@ -108,7 +108,7 @@
                                                      document.getElementById('logout-form').submit();">
                                     
                             <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
-                            <span class="title">Sign out</span>
+                            <span class="title">Đăng xuất</span>
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf

@@ -22,5 +22,7 @@ class InsertContentController extends Controller
         $date = Carbon::now();
         $data = array('title' => $title, 'content' => $content, 'time' => $date, 'id_author' => auth()->user()->id_student);
         DB::table('forum')->insert($data);
+
+        return redirect()->action('App\Http\Controllers\ForumController@show');
     }
 }
