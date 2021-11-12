@@ -36,7 +36,7 @@
                 <i class="fa fa-search"></i>
             </div>
 
-            <img class="profile-image" src="{{ url('img/user.png') }}" alt="">
+            <img class="profile-image" src="{{ Storage::url( Auth::user()->path ) }}" alt="image">
             
             <div class="dropdown">
                 <a class="btn btn-secondary dropdown-toggle abc" href="#" role="button" id="dropdownMenuLink"
@@ -45,7 +45,7 @@
                 </a>
 
                 <div class="dropdown-menu xy" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item item" href="#"><i class="fa fa-user" aria-hidden="true"></i>Tài khoản</a>
+                    <a class="dropdown-item item" href="{{ url('account') }}"><i class="fa fa-user" aria-hidden="true"></i>Tài khoản</a>
                     <a class="dropdown-item item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -78,12 +78,6 @@
                             <span class="title">Trang chủ</span>
                         </a>
                     </li>
-                    <li class="list active-user">
-                        <a href="#">
-                            <span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
-                            <span class="title">Tài khoản cá nhân</span>
-                        </a>
-                    </li>
                     <li class="list active-view">
                         <a href="/admin/info">
                             <span class="icon"><i class="fa fa-list-alt" aria-hidden="true"></i></span>
@@ -101,18 +95,6 @@
                             <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
                             <span class="title">Diễn đàn</span>
                         </a>
-                    </li>
-                    <li class="list">
-                        <a class="" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    
-                            <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
-                            <span class="title">Đăng xuất</span>
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
                     </li>
                 </ul>
             </div>

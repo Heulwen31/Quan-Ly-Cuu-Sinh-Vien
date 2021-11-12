@@ -133,3 +133,10 @@ body{
 .remember-label{
     font-size: 15px;
 }
+
+.error{
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
