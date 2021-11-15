@@ -10,6 +10,13 @@ use App\Imports\StudyDetailImport;
 
 class UserController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('checklogin');
+    }
+
     /**
     * @return \Illuminate\Support\Collection
     */

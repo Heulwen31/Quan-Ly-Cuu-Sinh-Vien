@@ -78,14 +78,6 @@
                             {{ __('Đăng nhập') }}
                         </button>
                     </div>
-
-                    <!-- <div>
-                        @if (Route::has('password.request'))
-                        <a class="btn btn-link edit-link" href="{{ route('password.request') }}">
-                            {{ __('Quên mật khẩu?') }}
-                        </a>
-                        @endif
-                    </div> -->
                 </form>
             </div>
         </div>

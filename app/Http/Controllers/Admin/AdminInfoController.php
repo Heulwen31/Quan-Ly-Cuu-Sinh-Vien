@@ -12,6 +12,13 @@ use Illuminate\Support\Facades\Hash;
 
 class AdminInfoController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('checklogin');
+    }
+
     /**
      * Display a listing of the resource.
      *

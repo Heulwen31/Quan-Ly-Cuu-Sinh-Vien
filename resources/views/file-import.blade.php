@@ -10,8 +10,12 @@
 
 <body>
     <div class="container mt-5 text-center">
+        <a href="/home">Home</a>
+
+        <br><br>
+
         <h2 class="mb-4">
-            Laravel 7 Import and Export CSV & Excel to Database Example
+            Import & Export file excel
         </h2>
 
         <form action="{{ route('file-import') }}" method="POST" enctype="multipart/form-data">
@@ -19,7 +23,7 @@
             <div class="form-group mb-4" style="max-width: 500px; margin: 0 auto;">
                 <div class="custom-file text-left">
                     <input type="file" name="file" class="custom-file-input" id="customFile">
-                    <label class="custom-file-label" for="customFile">Choose file</label>
+                    <label class="custom-file-label" for="customFile">Chọn file</label>
                 </div>
             </div>
             <button class="btn btn-primary">Import data</button>

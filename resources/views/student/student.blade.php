@@ -11,21 +11,14 @@
     <link rel="stylesheet" type="text/css" href="{{ url('css/info.css') }}">
 </head>
 <body>
-    @extends('home_page')
+    @extends('student/home_student')
 
-    @section('homepage')
+    @section('homestudent')
 
     <div class="wrap">
         <h1>Thông tin cá nhân</h1>
 
         <div class="line"></div>
-
-        <div class="add clearfix">
-            <a href="/admin/info/create" class="tools-link tools-link-add">
-                Thêm thông tin <i class="fa fa-plus-square"></i></a>
-            <a href="/file-import-export" class="tools-link tools-link-add excel">
-                Import/Export file excel</a>
-        </div>
 
         <table class="content-table">
             <thead>
@@ -39,13 +32,12 @@
                     <th>Số điện thoại</th>
                     <th>Địa chỉ</th>
                     <th>Công việc</th>
-                    <th>Công cụ</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($student as $row)
                 <tr>
-                    <td><a href="/admin/info/{{$row->id}}" class="link-id">{{ $row->id }}</a></td>
+                    <td><a href="/student/info/{{$row->id}}" class="link-id">{{ $row->id }}</a></td>
                     <td>{{ $row->name }}</td>
                     <td>{{ $row->email }}</td>
                     <td>{{ $row->cccd }}</td>
@@ -54,16 +46,6 @@
                     <td>{{ $row->phone }}</td>
                     <td>{{ $row->address }}</td>
                     <td>{{ $row->job }}</td>
-                    <td class="tools">
-                        <a href="/admin/info/edit/{{$row->id}}" class="tools-link tools-link-edit">
-                            Sửa <i class="fa fa-edit"></i></a>
-                        <form method="POST" action="/admin/info/delete/{{$row->id}}">
-                            @method('DELETE')
-                            @csrf
-                            <button type="submit" onclick="return confirmDel();" class="tools-link tools-link-delete">
-                                Xóa <i class="fa fa-trash"></i></button>
-                        </form>
-                    </td>
                 </tr>
                 @endforeach
             </tbody>

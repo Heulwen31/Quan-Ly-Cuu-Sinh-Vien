@@ -45,7 +45,7 @@
                 </a>
 
                 <div class="dropdown-menu xy" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item item" href="{{ url('account') }}"><i class="fa fa-user" aria-hidden="true"></i>Tài khoản</a>
+                    <a class="dropdown-item item" href="{{ url('accountstudent') }}"><i class="fa fa-user" aria-hidden="true"></i>Tài khoản</a>
                     <a class="dropdown-item item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -72,26 +72,20 @@
 
             <div class="navigation">
                 <ul>
-                    <li class="list active">
-                        <a href="/home">
+                    <li class="list active" style="background-color: #806cee;">
+                        <a href="/homestudent">
                             <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
                             <span class="title">Tổng quan</span>
                         </a>
                     </li>
                     <li class="list active-view">
-                        <a href="/admin/info">
+                        <a href="/student/info">
                             <span class="icon"><i class="fa fa-list-alt" aria-hidden="true"></i></span>
                             <span class="title">Xem thông tin cá nhân</span>
                         </a>
                     </li>
-                    <li class="list active-add">
-                        <a href="/admin/info/create">
-                            <span class="icon"><i class="fa fa-plus-square" aria-hidden="true"></i></span>
-                            <span class="title">Thêm mới thông tin</span>
-                        </a>
-                    </li>
                     <li class="list active-forum">
-                        <a href="/forum">
+                        <a href="/forumstudent">
                             <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
                             <span class="title">Diễn đàn</span>
                         </a>
@@ -111,10 +105,10 @@
                 }
             }
         }
-
     </script>
 
-    @yield('homepage')
+    @yield('homestudent')
+
 </body>
 
 </html>

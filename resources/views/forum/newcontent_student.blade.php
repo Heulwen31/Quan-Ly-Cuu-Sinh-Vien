@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="add" method="post">
+    <form action="addstudent" method="post">
         @csrf
         <div class="form-group">
             <label for="">Title</label>

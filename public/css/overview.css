@@ -1,3 +1,7 @@
+.body{
+    overflow: scroll;
+}
+
 .active {
     background-color: #806cee;
 }
@@ -5,8 +9,8 @@
 .wrap{
     position: absolute;
     top: 10%;
-    left: 15.8%;
-    width: 81%;
+    left: 29.7%;
+    width: 54%;
 }
 
 .wrap h1{
@@ -29,9 +33,9 @@
 .column{
     text-decoration: none;
     height: 200px;
-    width: 18%;
-    margin-right: 50px;
-    transform: translateX(90%);
+    width: 25%;
+    margin-right: 60px;
+    transform: translateX(120%);
     border-radius: 5px;
     color: #fff;
     border: none;
@@ -59,15 +63,6 @@
     transition: all .25s;
 }
 
-.col-add{
-    background-color: rgb(122, 77, 226);
-}
-
-.col-add::after{
-    content: "Thêm mới thông tin \21FE";
-    background-color: rgb(90, 55, 172);
-}
-
 .col-view{
     background-color: rgb(243, 171, 39);
 }
@@ -84,15 +79,6 @@
 .col-forum::after{
     content: "Diễn đàn \21FE";
     background-color: rgb(194, 119, 131);
-}
-
-.col-excel{
-    background-color: rgb(24, 148, 24);
-}
-
-.col-excel::after{
-    content: "Nhập/Xuất file excel \21FE";
-    background-color: rgb(20, 112, 20);
 }
 
 .content{
@@ -112,18 +98,10 @@
     transition: all .1s;
 }
 
-.col-icon-add{
-    background-color: rgba(90, 55, 172, 0.25);
-}
-
 .col-icon-view{
     background-color: rgba(201, 139, 25, 0.25);
 }
 
 .col-icon-forum{
     background-color: rgba(194, 119, 131, 0.25);
-}
-
-.col-icon-excel{
-    background-color: rgba(20, 112, 20, 0.25);
 }

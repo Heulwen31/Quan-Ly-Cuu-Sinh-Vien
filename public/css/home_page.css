@@ -8,13 +8,12 @@
 body {
     min-height: 100vh;
     background-color: #f4f4fb;
-    /* background: white; */
-    overflow: hidden;
+    overflow-x: hidden;
 }
 /*.----------------------.*/
 header {
     display: flex;
-    position: absolute;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -71,7 +70,6 @@ h4{
     object-fit: cover;
     border-radius: 50%;
     padding-left: -40px;
-    /* padding-right: 5px; */
 }
 .item >i {
     padding-right: 10px;
@@ -90,7 +88,9 @@ h4{
     color: black;
 }
 
-
+.xy{
+    margin-right: 11px;
+}
 
 
 .side-toggle {

@@ -104,6 +104,19 @@ a{
     margin-bottom: 20px;
 }
 
+.excel{
+    float: right;
+    background-color: rgb(18, 168, 18);
+}
+
+.clearfix{
+    clear: both;
+}
+
 .active-view {
     background-color: #806cee;
+}
+
+.active {
+    background-image: linear-gradient(90deg, #2641dd, #2d4af0);
 }

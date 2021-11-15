@@ -35,6 +35,11 @@ Route::patch('/admin/info/update/{id}', 'App\Http\Controllers\Admin\AdminInfoCon
 Route::delete('/admin/info/delete/{id}', 'App\Http\Controllers\Admin\AdminInfoController@destroy');
 
 
+//Student info
+Route::get('/student/info', 'App\Http\Controllers\Student\StudentController@index');
+Route::get('/student/info/{id}', 'App\Http\Controllers\Student\StudentController@show');
+
+
 //Auth route
 Auth::routes();
 
@@ -42,14 +47,21 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 //
-Route::get('/homeadmin', function () {
-    return view('/admin/home_admin');
+Route::get('/homestudent', function () {
+    return view('student/overview');
 });
 
-Route::get('/forum', 'App\Http\Controllers\ForumController@show');
 
+//
+Route::get('/forum', 'App\Http\Controllers\ForumController@show');
+Route::get('/forumstudent', 'App\Http\Controllers\ForumController@showStudent');
+
+
+//
 Route::get('index', [InsertContentController::class, 'index']);
+Route::get('indexstudent', [InsertContentController::class, 'indexStudent']);
 Route::post('add', [InsertContentController::class, 'add']);
+Route::post('addstudent', [InsertContentController::class, 'addStudent']);
 
 
 Route::get('file-import-export', [UserController::class, 'fileImportExport']);
@@ -57,8 +69,13 @@ Route::post('file-import', [UserController::class, 'fileImport'])->name('file-im
 Route::get('file-export', [UserController::class, 'fileExport'])->name('file-export');
 
 
+//
 Route::get('/account', 'App\Http\Controllers\ViewAccountController@show');
-Route::patch('/account/{id}', 'App\Http\Controllers\RePassController@update');
+Route::get('/accountstudent', 'App\Http\Controllers\ViewAccountController@showStudent');
 
 Route::patch('/save/{id}', 'App\Http\Controllers\ViewAccountController@save');
+Route::patch('/savestudent/{id}', 'App\Http\Controllers\ViewAccountController@saveStudent');
+Route::patch('/account/{id}', 'App\Http\Controllers\RePassController@update');
+
+
 
