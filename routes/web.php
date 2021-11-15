@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChartController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\InsertContentController;
@@ -62,3 +63,7 @@ Route::patch('/account/{id}', 'App\Http\Controllers\RePassController@update');
 
 Route::patch('/save/{id}', 'App\Http\Controllers\ViewAccountController@save');
 
+/**
+ * view
+ */
+Route::get('chart', [ChartController::class, 'statistic']);
