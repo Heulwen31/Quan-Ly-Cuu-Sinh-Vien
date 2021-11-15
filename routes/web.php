@@ -83,4 +83,4 @@ Route::patch('/account/{id}', 'App\Http\Controllers\RePassController@update');
 /**
  * view
  */
-Route::get('chart', [ChartController::class, 'statistic']);
+Route::get('home', [ChartController::class, 'statistic']);

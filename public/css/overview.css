@@ -105,3 +105,9 @@
 .col-icon-forum{
     background-color: rgba(194, 119, 131, 0.25);
 }
+
+.columns{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
