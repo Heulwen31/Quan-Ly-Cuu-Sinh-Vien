@@ -17,9 +17,6 @@
                 <div id="Sarah_chart_div" style="border: 1px solid #ccc"></div>
             </td>
             <td>
-                <div id="Anthony_chart_div" style="border: 1px solid #ccc"></div>
-            </td>
-            <td>
                 <div id="columnchart_values" style="border: 1px solid #ccc"></div>
             </td>
         </tr>
@@ -57,9 +54,9 @@
 
             // Set options for Sarah's pie chart.
             var options = {
-                title: 'How Much Pizza Sarah Ate Last Night',
-                width: 400,
-                height: 300
+                title: 'Thông kê số lượng xếp hạng sinh viên',
+                width: 600,
+                height: 400
             };
 
             // Instantiate and draw the chart for Sarah's pizza.
@@ -98,7 +95,7 @@
             ]);
 
             var options = {
-                title: "Density of Precious Metals, in g/cm^3",
+                title: "Thông kê số lượng xếp hạng sinh viên",
                 width: 600,
                 height: 400,
                 bar: {
