@@ -31,10 +31,27 @@ Route::get('/admin/info', 'App\Http\Controllers\Admin\AdminInfoController@index'
 Route::get('/admin/info/{id}', 'App\Http\Controllers\Admin\AdminInfoController@show');
 
 Route::get('/admin/info/edit/{id}', 'App\Http\Controllers\Admin\AdminInfoController@edit');
-Route::patch('/admin/info/update/{id}', 'App\Http\Controllers\Admin\AdminInfoController@update');
+
+Route::patch('/admin/info/update1/{id}', 'App\Http\Controllers\Admin\AdminInfoController@update1');
+Route::patch('/admin/info/update2/{id}', 'App\Http\Controllers\Admin\AdminInfoController@update2');
+Route::patch('/admin/info/update3/{id}', 'App\Http\Controllers\Admin\AdminInfoController@update3');
+Route::patch('/admin/info/update4/{id}', 'App\Http\Controllers\Admin\AdminInfoController@update4');
+Route::patch('/admin/info/update5/{id}', 'App\Http\Controllers\Admin\AdminInfoController@update5');
+Route::patch('/admin/info/update6/{id}', 'App\Http\Controllers\Admin\AdminInfoController@update6');
+Route::patch('/admin/info/update7/{id}', 'App\Http\Controllers\Admin\AdminInfoController@update7');
+Route::patch('/admin/info/update8/{id}', 'App\Http\Controllers\Admin\AdminInfoController@update8');
 
 Route::delete('/admin/info/delete/{id}', 'App\Http\Controllers\Admin\AdminInfoController@destroy');
 
+//
+Route::post('/search1', 'App\Http\Controllers\Admin\AdminInfoController@search1');
+Route::post('/search2', 'App\Http\Controllers\Admin\AdminInfoController@search2');
+Route::post('/search3', 'App\Http\Controllers\Admin\AdminInfoController@search3');
+Route::post('/search4', 'App\Http\Controllers\Admin\AdminInfoController@search4');
+Route::post('/search5', 'App\Http\Controllers\Admin\AdminInfoController@search5');
+Route::post('/search6', 'App\Http\Controllers\Admin\AdminInfoController@search6');
+Route::post('/search7', 'App\Http\Controllers\Admin\AdminInfoController@search7');
+Route::post('/search8', 'App\Http\Controllers\Admin\AdminInfoController@search8');
 
 //Student info
 Route::get('/student/info', 'App\Http\Controllers\Student\StudentController@index');

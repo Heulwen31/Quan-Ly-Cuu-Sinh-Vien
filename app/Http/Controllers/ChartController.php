@@ -7,7 +7,13 @@ use Illuminate\Support\Facades\DB;
 
 class ChartController extends Controller
 {
-    //
+    
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('checklogin');
+    }
+
     public function statistic()
     {
         $below_average = DB::table('study__details')->where('cpa', '>=', 1)->where('cpa', '<', 2.5)->count('student_id');

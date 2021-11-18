@@ -88,11 +88,6 @@ h4{
     color: black;
 }
 
-.xy{
-    margin-right: 11px;
-}
-
-
 .side-toggle {
     position: fixed;
     z-index: 2;
@@ -117,7 +112,7 @@ section::after {
 
 .navigation {
     position: fixed;
-    width: 230px;
+    width: 235px;
     height: 100%;
     background-image: linear-gradient(45deg, #6a6c79, #1c3eff);
     transition: width .5s;

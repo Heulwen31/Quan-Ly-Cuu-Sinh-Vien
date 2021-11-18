@@ -64,7 +64,7 @@
 }
 
 .col-add::after{
-    content: "Thêm mới thông tin \21FE";
+    content: "Thêm thông tin \21FE";
     background-color: rgb(90, 55, 172);
 }
 
@@ -73,7 +73,7 @@
 }
 
 .col-view::after{
-    content: "Xem thông tin \21FE";
+    content: "Thông tin cựu sinh viên \21FE";
     background-color: rgb(201, 139, 25);
 }
 

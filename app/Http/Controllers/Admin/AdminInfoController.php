@@ -143,7 +143,7 @@ class AdminInfoController extends Controller
     {
         $student = Student::find($id);
         $study_detail = Student::find($id)->study;
-        return view('/admin/info_update', compact('student', 'study_detail'));
+        return view('/admin/info', compact('student', 'study_detail'));
     }
 
     /**
@@ -153,30 +153,86 @@ class AdminInfoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+
+    public function update1(Request $request, $id)
     {
         $student = Student::find($id);
-        $study_detail = Student::find($id)->study;
 
         $student->id = $request->id;
-        $student->cccd = $request->cccd;
+        $student->save();
+        return redirect('admin/info');
+    }
+
+    public function update2(Request $request, $id)
+    {
+        $student = Student::find($id);
+        // $study_detail = Student::find($id)->study;
+
+        // $student->id = $request->id;
         $student->name = $request->name;
-        $student->sex = $request->sex;
-        $student->birth = $request->birth;
-        $student->email = $request->email;
-        $student->phone = $request->phone;
-        $student->address = $request->address;
-        $student->job = $request->job;
+        // $student->sex = $request->sex;
+        // $student->birth = $request->birth;
+        // $student->email = $request->email;
+        // $student->phone = $request->phone;
+        // $student->address = $request->address;
+        // $student->job = $request->job;
         $student->save();
 
-        $study_detail->consultant = $request->consultant;
-        $study_detail->cpa = $request->cpa;
-        $study_detail->point_training = $request->point_training;
-        $study_detail->faculty = $request->faculty;
-        $study_detail->course = $request->course;
-        $study_detail->save();
+        // $study_detail->consultant = $request->consultant;
+        // $study_detail->cpa = $request->cpa;
+        // $study_detail->point_training = $request->point_training;
+        // $study_detail->faculty = $request->faculty;
+        // $study_detail->course = $request->course;
+        // $study_detail->save();
 
-        return redirect()->action('App\Http\Controllers\Admin\AdminInfoController@index');
+        return redirect('admin/info');
+    }
+    public function update3(Request $request, $id)
+    {
+        $student = Student::find($id);
+        $student->email = $request->email;
+        $student->save();
+        return redirect('admin/info');
+    }
+
+    public function update4(Request $request, $id)
+    {
+        $student = Student::find($id);
+        $student->sex = $request->sex;
+        $student->save();
+        return redirect('admin/info');
+    }
+
+    public function update5(Request $request, $id)
+    {
+        $student = Student::find($id);
+        $student->birth = $request->birth;
+        $student->save();
+        return redirect('admin/info');
+    }
+
+    public function update6(Request $request, $id)
+    {
+        $student = Student::find($id);
+        $student->phone = $request->phone;
+        $student->save();
+        return redirect('admin/info');
+    }
+
+    public function update7(Request $request, $id)
+    {
+        $student = Student::find($id);
+        $student->address = $request->address;
+        $student->save();
+        return redirect('admin/info');
+    }
+
+    public function update8(Request $request, $id)
+    {
+        $student = Student::find($id);
+        $student->job = $request->job;
+        $student->save();
+        return redirect('admin/info');
     }
 
     /**
@@ -191,5 +247,77 @@ class AdminInfoController extends Controller
 
         $student->delete();
         return redirect()->action('App\Http\Controllers\Admin\AdminInfoController@index');
+    }
+
+    public function search1(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            $name = $request->get('searchid');
+            $student = Student::where('id', 'LIKE', '%' . $name . '%')->paginate(5);
+        }
+        return view('/admin/info', compact('student'));
+    }
+
+    public function search2(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            $name = $request->get('searchname');
+            $student = Student::where('name', 'LIKE', '%' . $name . '%')->paginate(5);
+        }
+        return view('/admin/info', compact('student'));
+    }
+
+    public function search3(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            $name = $request->get('searchemail');
+            $student = Student::where('email', 'LIKE', '%' . $name . '%')->paginate(5);
+        }
+        return view('/admin/info', compact('student'));
+    }
+
+    public function search4(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            $name = $request->get('searchsex');
+            $student = Student::where('sex', 'LIKE', '%' . $name . '%')->paginate(5);
+        }
+        return view('/admin/info', compact('student'));
+    }
+
+    public function search5(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            $name = $request->get('searchbirth');
+            $student = Student::where('birth', 'LIKE', '%' . $name . '%')->paginate(5);
+        }
+        return view('/admin/info', compact('student'));
+    }
+
+    public function search6(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            $name = $request->get('searchphone');
+            $student = Student::where('phone', 'LIKE', '%' . $name . '%')->paginate(5);
+        }
+        return view('/admin/info', compact('student'));
+    }
+
+    public function search7(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            $name = $request->get('searchaddress');
+            $student = Student::where('address', 'LIKE', '%' . $name . '%')->paginate(5);
+        }
+        return view('/admin/info', compact('student'));
+    }
+
+    public function search8(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            $name = $request->get('searchjob');
+            $student = Student::where('job', 'LIKE', '%' . $name . '%')->paginate(5);
+        }
+        return view('/admin/info', compact('student'));
     }
 }

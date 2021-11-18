@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -29,13 +29,6 @@
     <header>
         <h4>Quản lý cựu sinh viên</h4>
         <div class="profile">
-            <div class="box">
-                <form action="/search" method="get"></form>
-                <input class="stext" type="text" placeholder="Search....">
-                <a class="button" type="submit" href="#"></a>
-                <i class="fa fa-search"></i>
-            </div>
-
             <img class="profile-image" src="{{ Storage::url( Auth::user()->path ) }}" alt="image">
             
             <div class="dropdown">
@@ -50,7 +43,7 @@
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     
-                            <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                            <span class="icon"><i class="fa fa-sign-out-alt" aria-hidden="true"></i></span>
                             <span class="title-logout">Đăng xuất</span>
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -80,8 +73,8 @@
                     </li>
                     <li class="list active-view">
                         <a href="/student/info">
-                            <span class="icon"><i class="fa fa-list-alt" aria-hidden="true"></i></span>
-                            <span class="title">Xem thông tin cá nhân</span>
+                            <span class="icon"><i class="fa fa-clipboard-list" aria-hidden="true"></i></span>
+                            <span class="title">Thông tin cá nhân</span>
                         </a>
                     </li>
                     <li class="list active-forum">

@@ -23,12 +23,12 @@
 
     <div class="row">
         <a href="/admin/info/create" class="column col-add">
-            <p class="content">Thêm mới thông tin</p>
+            <p class="content">Thêm thông tin</p>
             <i class="fa fa-plus-square col-icon col-icon-add" aria-hidden="true"></i>
         </a>
         <a href="/admin/info" class="column col-view">
-            <p class="content">Xem thông tin</p>
-            <i class="fa fa-list-alt col-icon col-icon-view" aria-hidden="true"></i>
+            <p class="content">Thông tin cựu sinh viên</p>
+            <i class="fa fa-clipboard-list col-icon col-icon-view" aria-hidden="true"></i>
         </a>
         <a href="/forum" class="column col-forum">
             <p class="content">Diễn đàn</p>
@@ -36,7 +36,7 @@
         </a>
         <a href="/file-import-export" class="column col-excel">
             <p class="content">Nhập/Xuất file excel</p>
-            <i class="fa fa-file col-icon col-icon-excel" aria-hidden="true"></i>
+            <i class="fa fa-file-excel col-icon col-icon-excel" aria-hidden="true"></i>
         </a>
     </div>
 

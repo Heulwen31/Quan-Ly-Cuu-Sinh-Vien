@@ -68,7 +68,7 @@
 }
 
 .col-view::after{
-    content: "Xem thông tin \21FE";
+    content: "Thông tin cá nhân \21FE";
     background-color: rgb(201, 139, 25);
 }
 
