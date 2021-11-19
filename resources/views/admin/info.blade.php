@@ -96,56 +96,56 @@
                 @foreach($student as $row)
                 <tr>
                     <td>
-                        <form method="post" action="/admin/info/update1/{{ $row->id }}" class="form" onsubmit="return updateInfo(this);">
+                        <form method="post" action="/admin/info/update1/{{ $row->id }}" class="form" id="form-id" onsubmit="updateInfo()">
                             @method('PATCH')
                             @csrf
                             <input class="wrap-input input-id" type="text" name="id" value="{{$row->id}}">
                         </form>
                     </td>
                     <td>
-                        <form method="post" action="/admin/info/update2/{{ $row->id }}" class="form" onsubmit="return updateInfo(this);">
+                        <form method="post" action="/admin/info/update2/{{ $row->id }}" class="form" onsubmit="updateInfo();">
                             @method('PATCH')
                             @csrf
                             <input class="wrap-input input-name" type="text" name="name" value="{{$row->name}}">
                         </form>
                     </td>
                     <td>
-                        <form method="post" action="/admin/info/update3/{{ $row->id }}" class="form" onsubmit="return updateInfo(this);">
+                        <form method="post" action="/admin/info/update3/{{ $row->id }}" class="form" onsubmit="updateInfo();">
                             @method('PATCH')
                             @csrf
                             <input class="wrap-input input-email" type="text" name="email" value="{{$row->email}}">
                         </form>
                     </td>
                     <td>
-                        <form method="post" action="/admin/info/update4/{{ $row->id }}" class="form" onsubmit="return updateInfo(this);">
+                        <form method="post" action="/admin/info/update4/{{ $row->id }}" class="form" onsubmit="updateInfo();">
                             @method('PATCH')
                             @csrf
                             <input class="wrap-input input-sex" type="text" name="sex" value="{{$row->sex}}">
                         </form>
                     </td>
                     <td>
-                        <form method="post" action="/admin/info/update5/{{ $row->id }}" class="form" onsubmit="return updateInfo(this);">
+                        <form method="post" action="/admin/info/update5/{{ $row->id }}" class="form" onsubmit="updateInfo();">
                             @method('PATCH')
                             @csrf
                             <input class="wrap-input input-birth" id="dt" type="text" name="birth" value="{{$row->birth}}" onchange="mydate();">
                         </form>
                     </td>
                     <td>
-                        <form method="post" action="/admin/info/update6/{{ $row->id }}" class="form" onsubmit="return updateInfo(this);">
+                        <form method="post" action="/admin/info/update6/{{ $row->id }}" class="form" onsubmit="updateInfo();">
                             @method('PATCH')
                             @csrf
                             <input class="wrap-input input-phone" type="text" name="phone" value="{{$row->phone}}">
                         </form>
                     </td>
                     <td>
-                        <form method="post" action="/admin/info/update7/{{ $row->id }}" class="form" onsubmit="return updateInfo(this);">
+                        <form method="post" action="/admin/info/update7/{{ $row->id }}" class="form" onsubmit="updateInfo();">
                             @method('PATCH')
                             @csrf
                             <input class="wrap-input input-address" type="text" name="address" value="{{$row->address}}">
                         </form>
                     </td>
                     <td>
-                        <form method="post" action="/admin/info/update8/{{ $row->id }}" class="form" onsubmit="return updateInfo(this);">
+                        <form method="post" action="/admin/info/update8/{{ $row->id }}" class="form" onsubmit="updateInfo();">
                             @method('PATCH')
                             @csrf
                             <input class="wrap-input input-job" type="text" name="job" value="{{$row->job}}">
@@ -175,9 +175,7 @@
         }
 
         function updateInfo() {
-            if (!confirm("Bạn chắc chắn muốn sửa thông tin thông tin này?")) {
-                return false;
-            }
+            alert("Thay đổi dữ liệu thành công!");
         }
 
         function mydate() {

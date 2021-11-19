@@ -4,14 +4,14 @@
 
 .wrap{
     position: absolute;
-    top: 10%;
-    left: 15.8%;
+    top: 12%;
+    left: 17%;
     width: 81%;
 }
 
 .wrap h1{
     color: chocolate;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .line{
@@ -24,17 +24,19 @@
     display: flex;
     height: fit-content;
     margin-top: 250px;
+    padding-left: 25px;
 }
 
 .column{
     text-decoration: none;
-    height: 200px;
+    height: 160px;
     width: 18%;
     margin-right: 50px;
     transform: translateX(90%);
     border-radius: 5px;
     color: #fff;
     border: none;
+    font-size: 14px;
 }
 
 .column:hover, .column:visited, .column:active{
@@ -43,7 +45,7 @@
 
 .column:hover::after{
     height: 20%;
-    transform: translateY(-9px);
+    transform: translateY(-5px);
 }
 
 .column::after{
@@ -54,7 +56,7 @@
     height: 16%;
     border-radius: 3px;
     border: none;
-    font-size: 18px;
+    font-size: 14px;
     text-align: center;
     transition: all .25s;
 }
@@ -98,17 +100,17 @@
 .content{
     position: absolute;
     top: 25%;
-    left: 7%;
-    font-size: 18px;
+    left: 6%;
+    font-size: 16px;
 }
 
 .col-icon{
     position: absolute;
     top: 16%;
     right: 5%;
-    padding: 28px;
+    padding: 20px;
     border-radius: 50%;
-    font-size: 28px !important;
+    font-size: 20px !important;
     transition: all .1s;
 }
 
@@ -118,6 +120,7 @@
 
 .col-icon-view{
     background-color: rgba(201, 139, 25, 0.25);
+    right: 3%;
 }
 
 .col-icon-forum{
@@ -129,7 +132,7 @@
 }
 
 .columns{
-    margin-left: 295px;
-    margin-top: 200px;
+    margin-left: 280px;
+    margin-top: 180px;
     margin-bottom: 160px;
 }

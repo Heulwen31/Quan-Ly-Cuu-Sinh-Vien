@@ -112,7 +112,7 @@ section::after {
 
 .navigation {
     position: fixed;
-    width: 235px;
+    width: 226px;
     height: 100%;
     background-image: linear-gradient(45deg, #6a6c79, #1c3eff);
     transition: width .5s;
@@ -164,7 +164,7 @@ section::after {
 }
 
 .navigation  ul li a .icon .fa {
-    font-size: 25px;
+    font-size: 22px;
 }
 .navigation  ul li a .title {
     position: relative;
@@ -174,6 +174,7 @@ section::after {
     line-height: 60px;
     text-align: start;
     white-space: nowrap;
-    transform: translateY(-1.5px);
+    transform: translate(-5px, -1.5px);
+    font-size: 16px;
 }
 /* .----------------------. */

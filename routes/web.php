@@ -101,3 +101,15 @@ Route::patch('/account/{id}', 'App\Http\Controllers\RePassController@update');
  * view
  */
 Route::get('home', [ChartController::class, 'statistic']);
+
+
+//
+Route::prefix('chat')->name('client.chat.')->group(function () {
+    Route::get('', 'App\Http\Controllers\Client\ChatController@index')->name('index');
+    Route::post('/submit', 'App\Http\Controllers\Client\ChatController@submit')->name('submit');
+});
+
+Route::prefix('admin/chat')->name('admin.chat.')->group(function () {
+    Route::get('', 'App\Http\Controllers\Admin\ChatController@index')->name('index');
+    Route::post('/submit', 'App\Http\Controllers\Admin\ChatController@submit')->name('submit');
+});

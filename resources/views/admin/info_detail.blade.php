@@ -21,7 +21,7 @@
         <div class="line"></div>
 
         <div class="back-to-view">
-            <a href="/admin/info" class="btn-view">Xem thông tin cá nhân</a>
+            <a href="/admin/info" class="btn-view">Thông tin cá nhân</a>
         </div>
 
         <table class="content-table">

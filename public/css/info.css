@@ -7,24 +7,26 @@ body {
 .wrap{
     position: absolute;
     top: 10%;
-    left: 14%;
+    left: 15.5%;
 }
 
 h1{
     text-align: left;
-    font-size: 50px;
+    font-size: 40px;
     color: rgb(116, 175, 28);
 }
 
 .line{
-    border: 1px solid #46f7d3;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    border: none;
+    height: 1px;
+    background-color: #46f7d3;
+    margin-bottom: 40px;
+    margin-top: 40px;
 }
 
 .content-table {
     border-collapse: collapse;
-    font-size: 16px;
+    font-size: 12px;
     min-width: 400px;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
@@ -46,7 +48,7 @@ h1{
 
 .content-table th:last-child,
 .content-table td:last-child {
-    width: 230px;
+    width: 205px;
 }
 
 .content-table tbody tr {
@@ -78,7 +80,7 @@ a{
     background-color: rgb(161, 111, 18);
     margin-right: 10px;
     color: white;
-    font-size: 16px;
+    font-size: 13px;
     padding: 5px;
     border-radius: 5px;
 }
@@ -89,7 +91,7 @@ a{
 
 .tools-link-delete{
     border: none;
-    font-size: 15x;
+    font-size: 14x;
     width: 65px;
     height: 32px;
     background-color: brown;
@@ -106,7 +108,7 @@ a{
 }
 
 .head-link{
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .excel{
@@ -136,35 +138,35 @@ a{
 }
 
 .search-id{
-    width: 85px;
+    width: 70px;
 }
 
 .search-name{
-    width: 190px;
+    width: 130px;
 }
 
 .search-email{
-    width: 200px;
+    width: 150px;
 }
 
 .search-sex{
-    width: 60px;
+    width: 45px;
 }
 
 .search-birth{
-    width: 120px;
+    width: 85px;
 }
 
 .search-phone{
-    width: 100px;
+    width: 90px;
 }
 
 .search-address{
-    width: 240px;
+    width: 180px;
 }
 
 .search-job{
-    width: 90px;
+    width: 70px;
 }
 
 .wrap-input{
@@ -180,34 +182,34 @@ a{
 }
 
 .input-id{
-    width: 85px;
+    width: 70px;
 }
 
 .input-name{
-    width: 190px;
+    width: 130px;
 }
 
 .input-email{
-    width: 200px;
+    width: 150px;
 }
 
 .input-sex{
-    width: 60px;
+    width: 45px;
 }
 
 .input-birth{
-    width: 120px;
+    width: 85px;
 }
 
 .input-phone{
-    width: 100px;
+    width: 90px;
 }
 
 .input-address{
-    width: 240px;
+    width: 180px;
 }
 
 .input-job{
-    width: 90px;
+    width: 70px;
 }
 

@@ -22,7 +22,7 @@
     <div class="row">
         <a href="/student/info" class="column col-view">
             <p class="content">Thông tin cá nhân</p>
-            <i class="fa fa-clipboard-list col-icon col-icon-view" aria-hidden="true"></i>
+            <i class="fa fa-list-alt col-icon col-icon-view" aria-hidden="true"></i>
         </a>
         <a href="/forumstudent" class="column col-forum">
             <p class="content">Diễn đàn</p>

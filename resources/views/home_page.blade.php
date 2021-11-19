@@ -73,8 +73,14 @@
                     </li>
                     <li class="list active-view">
                         <a href="/admin/info">
-                            <span class="icon"><i class="fa fa-clipboard-list" aria-hidden="true"></i></span>
+                            <span class="icon"><i class="fa fa-list-alt" aria-hidden="true"></i></span>
                             <span class="title">Thông tin cựu sinh viên</span>
+                        </a>
+                    </li>
+                    <li class="list active-chat">
+                        <a href="/admin/chat">
+                            <span class="icon"><i class="fa fa-comments" aria-hidden="true"></i></span>
+                            <span class="title">Chat</span>
                         </a>
                     </li>
                     <li class="list active-forum">

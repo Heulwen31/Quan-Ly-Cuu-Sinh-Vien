@@ -5,25 +5,27 @@
   
 .wrap{
     position: absolute;
-    top: 10%;
-    left: 14%;
+    top: 14%;
+    left: 16%;
 }
 
 h1{
     text-align: left;
-    font-size: 50px;
+    font-size: 40px;
     color: rgb(116, 175, 28);
 }
 
 .line{
-    border: 1px solid #46f7d3;
+    border: none;
+    background-color: #46f7d3;
+    height: 1px;
     margin-bottom: 40px;
     margin-top: 50px;
 }
 
 .content-table {
     border-collapse: collapse;
-    font-size: 18px;
+    font-size: 14px;
     min-width: 400px;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
@@ -41,13 +43,8 @@ h1{
 .content-table th,
 .content-table td {
     padding: 12px 15px;
-    width: 200px;
+    width: 180px;
     border-right: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-.content-table th:last-child,
-.content-table td:last-child {
-    width: 370px;
 }
 
 .content-table tbody tr {
@@ -74,7 +71,7 @@ a{
     background-color: red;
     margin-right: 10px;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     padding: 5px;
     border-radius: 5px;
 }
@@ -104,6 +101,7 @@ a{
     background-color:#A9A9A9;
     padding: 10px 8px;
     border-radius: 5px;
+    font-size: 15px;
 }
 
 .btn-view:hover,

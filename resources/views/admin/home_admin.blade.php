@@ -28,7 +28,7 @@
         </a>
         <a href="/admin/info" class="column col-view">
             <p class="content">Thông tin cựu sinh viên</p>
-            <i class="fa fa-clipboard-list col-icon col-icon-view" aria-hidden="true"></i>
+            <i class="fa fa-list-alt col-icon col-icon-view" aria-hidden="true"></i>
         </a>
         <a href="/forum" class="column col-forum">
             <p class="content">Diễn đàn</p>
@@ -114,7 +114,7 @@
             // Set options for Sarah's pie chart.
             var options = {
                 title: 'Thống kê số lượng xếp hạng sinh viên',
-                width: 690,
+                width: 550,
                 height: 600
             };
 
@@ -155,7 +155,7 @@
 
             var options = {
                 title: "Thông kê số lượng xếp hạng sinh viên",
-                width: 800,
+                width: 650,
                 height: 600,
                 bar: {
                     groupWidth: "95%"
