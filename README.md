@@ -1,9 +1,9 @@
-Sau khi clone về chạy:
-    composer install
-    cop file env (sửa database và BROADCAST_DRIVER=pusher)
-    php artisan storage:link (để chạy được ảnh)
-    composer require pusher/pusher-php-server:*
-    composer update
+Sau khi clone về chạy: <br>
+    composer install <br>
+    cop file env (sửa database và BROADCAST_DRIVER=pusher) <br>
+    php artisan storage:link (để chạy được ảnh) <br>
+    composer require pusher/pusher-php-server:* <br>
+    composer update <br>
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
