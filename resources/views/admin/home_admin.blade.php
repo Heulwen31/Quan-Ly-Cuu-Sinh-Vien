@@ -84,6 +84,15 @@
         list_col[3].onmouseenter = function() {
             list_icon[3].style.transform = "scale(1.1)"
         }
+        list_col[4].onmouseenter = function() {
+            list_icon[4].style.transform = "scale(1.1)"
+        }
+        list_col[5].onmouseenter = function() {
+            list_icon[5].style.transform = "scale(1.1)"
+        }
+        list_col[6].onmouseenter = function() {
+            list_icon[6].style.transform = "scale(1.1)"
+        }
 
         list_col[0].onmouseleave = function() {
             list_icon[0].style.transform = "scale(1)"
@@ -96,6 +105,15 @@
         }
         list_col[3].onmouseleave = function() {
             list_icon[3].style.transform = "scale(1)"
+        }
+        list_col[4].onmouseleave = function() {
+            list_icon[4].style.transform = "scale(1)"
+        }
+        list_col[5].onmouseleave = function() {
+            list_icon[5].style.transform = "scale(1)"
+        }
+        list_col[6].onmouseleave = function() {
+            list_icon[6].style.transform = "scale(1)"
         }
 
         google.charts.load('current', {
@@ -182,6 +200,8 @@
             };
             var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
             chart.draw(view, options);
+
+            
         }
     </script>
 

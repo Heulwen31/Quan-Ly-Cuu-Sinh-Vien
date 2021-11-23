@@ -124,3 +124,8 @@ Route::prefix('admin/chat')->name('admin.chat.')->group(function () {
     Route::get('', 'App\Http\Controllers\Admin\ChatController@index')->name('index');
     Route::post('/submit', 'App\Http\Controllers\Admin\ChatController@submit')->name('submit');
 });
+
+/**
+ * view chart 
+ */
+Route::get('chart', [ChartController::class, 'statistic2']);

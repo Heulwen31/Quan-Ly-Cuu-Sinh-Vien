@@ -56,7 +56,7 @@ h1{
 
 .content-table {
     border-collapse: collapse;
-    font-size: 12px;
+    font-size: 14px;
     min-width: 400px;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
@@ -78,7 +78,7 @@ h1{
 
 .content-table th:last-child,
 .content-table td:last-child {
-    width: 205px;
+    width: 210px;
 }
 
 .content-table tbody tr {
@@ -110,7 +110,7 @@ a{
     background-color: rgb(161, 111, 18);
     margin-right: 10px;
     color: white;
-    font-size: 13px;
+    font-size: 15px;
     padding: 5px;
     border-radius: 5px;
 }
@@ -163,23 +163,23 @@ a{
 }
 
 .search-id{
-    width: 70px;
+    width: 80px;
 }
 
 .search-name{
-    width: 130px;
+    width: 140px;
 }
 
 .search-email{
-    width: 150px;
+    width: 170px;
 }
 
 .search-sex{
-    width: 45px;
+    width: 50px;
 }
 
 .search-birth{
-    width: 85px;
+    width: 90px;
 }
 
 .search-phone{
@@ -187,11 +187,11 @@ a{
 }
 
 .search-address{
-    width: 180px;
+    width: 90px;
 }
 
 .search-job{
-    width: 70px;
+    width: 100px;
 }
 
 .wrap-input{
@@ -207,23 +207,23 @@ a{
 }
 
 .input-id{
-    width: 70px;
+    width: 80px;
 }
 
 .input-name{
-    width: 130px;
+    width: 140px;
 }
 
 .input-email{
-    width: 150px;
+    width: 170px;
 }
 
 .input-sex{
-    width: 45px;
+    width: 50px;
 }
 
 .input-birth{
-    width: 85px;
+    width: 90px;
 }
 
 .input-phone{
@@ -231,10 +231,10 @@ a{
 }
 
 .input-address{
-    width: 180px;
+    width: 90px;
 }
 
 .input-job{
-    width: 70px;
+    width: 100px;
 }
 

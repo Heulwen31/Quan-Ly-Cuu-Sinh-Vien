@@ -28,7 +28,7 @@
 
             <div class="form">
                 <div class="heading-form">
-                    <h2>UETLOGIN</h2>
+                    <h2>UETCSV</h2>
                     <p>Sử dụng tài khoản bạn được cung cấp</p>
                 </div>
                 <form method="POST" action="{{ route('login') }}">

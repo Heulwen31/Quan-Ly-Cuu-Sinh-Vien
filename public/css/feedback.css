@@ -97,3 +97,18 @@ label{
   color: #fff !important;
 }
   
+.image{
+  width: 250px;
+}
+
+.notification{
+  text-align: center;
+  width: 40%;
+  margin-top: 20px;
+}
+
+.notification p{
+  width: 75%;
+  text-align: justify;
+  transform: translateX(45px);
+}

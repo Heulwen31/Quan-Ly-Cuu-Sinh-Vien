@@ -29,7 +29,6 @@
                     <th>Mã sinh viên</th>
                     <th>Họ tên</th>
                     <th>Email</th>
-                    <th>Số CCCD</th>
                     <th>Giới tính</th>
                     <th>Ngày sinh</th>
                     <th>Số điện thoại</th>
@@ -43,7 +42,6 @@
                     <td><a href="/student/info/{{$row->id}}" class="link-id">{{ $row->id }}</a></td>
                     <td>{{ $row->name }}</td>
                     <td>{{ $row->email }}</td>
-                    <td>{{ $row->cccd }}</td>
                     <td>{{ $row->sex }}</td>
                     <td>{{ $row->birth }}</td>
                     <td>{{ $row->phone }}</td>

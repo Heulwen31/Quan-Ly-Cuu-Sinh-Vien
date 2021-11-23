@@ -23,13 +23,6 @@
     </div>
     
     <div class="wrap">
-        <!-- <div class="add clearfix">
-            <a href="/admin/info/create" class="tools-link tools-link-add head-link">
-                Thêm thông tin <i class="fa fa-plus-square"></i></a>
-            <a href="/file-import-export" class="tools-link tools-link-add excel head-link">
-                Nhập/Xuất file excel</a>
-        </div> -->
-
         <table class="content-table">
             <thead>
                 <tr>
@@ -130,7 +123,7 @@
                         <form method="post" action="/admin/info/update5/{{ $row->id }}" class="form" onsubmit="updateInfo();">
                             @method('PATCH')
                             @csrf
-                            <input class="wrap-input input-birth" id="dt" type="text" name="birth" value="{{$row->birth}}" onchange="mydate();">
+                            <input class="wrap-input input-birth" id="dt" type="text" name="birth" value="{{$row->birth}}">
                         </form>
                     </td>
                     <td>
@@ -181,18 +174,11 @@
             alert("Thay đổi dữ liệu thành công!");
         }
 
-        function mydate() {
-            // d = new Date(document.getElementById("dt").value);
-            // dt = d.getDate();
-            // mn = d.getMonth();
-            // mn++;
-            // yy = d.getFullYear();
-            // document.getElementById("ndt").value = dt + "/" + mn + "/" + yy
-            // document.getElementById("ndt").hidden = false;
-            // document.getElementById("dt").hidden = true;
-            var d = document.getElementById("dt");
-            dt.value="Hello";
-        }
+        // window.onload = function()
+        // {
+        //     var dt = document.getElementById("dt");
+        //     dt.value = "hello";
+        // };
     </script>
 
     @endsection

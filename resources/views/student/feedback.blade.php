@@ -39,7 +39,10 @@
         </form>
 
         <div class="notification">
-            Bạn có thể gửi phản hồi ở đây.
+            <img src="{{ url('img/report.png') }}" class="image" alt="">
+            <p>Nếu có bất kì vấn đề nào, bạn có thể phản hồi cho chúng tôi qua biểu mẫu này. 
+                Chúng tôi sẽ tiếp nhận vấn đề và cố gắng sửa chữa sớm nhất có thể.
+            </p>
         </div>
     </div>
     
