@@ -166,6 +166,8 @@
             };
             var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
             chart.draw(view, options);
+
+            
         }
     </script>
 
