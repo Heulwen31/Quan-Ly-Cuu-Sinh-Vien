@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Forum extends Migration
+class AddColumnForForum extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class Forum extends Migration
      */
     public function up()
     {
-        //
-        Schema::create('forum', function (Blueprint $table) {
-            $table->string('content');
-            $table->date('time');
-            $table->string('id_author');
-            $table->string('title');
+        Schema::table('forum', function (Blueprint $table) {
+            $table->string('username');
+            $table->string('userpath');
         });
     }
 
@@ -30,6 +27,5 @@ class Forum extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('forum');
     }
 }

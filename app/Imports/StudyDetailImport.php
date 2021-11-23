@@ -14,14 +14,19 @@ class StudyDetailImport implements ToModel
      */
     public function model(array $row)
     {
-        return new Study_Detail([
-            //
-            'student_id' => $row[3],
-            'consultant' => $row[10],
-            'cpa' => $row[11],
-            'point_training' => $row[12],
-            'course' => $row[13],
-            'faculty' => $row[14],
-        ]);
+
+        $isStudy = Study_Detail::where('student_id', $row[3])->first();
+
+        if (!$isStudy) {
+            $study = new Study_Detail([
+                'student_id' => $row[3],
+                'consultant' => $row[10],
+                'cpa' => $row[11],
+                'point_training' => $row[12],
+                'course' => $row[13],
+                'faculty' => $row[14],
+            ]);
+            return $study;
+        }
     }
 }

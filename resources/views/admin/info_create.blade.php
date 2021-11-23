@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <title>Create</title>
 
     <link rel="stylesheet" type="text/css" href="{{ url('css/info_create.css') }}">
@@ -14,7 +15,11 @@
 
     @section('homepage')
 
-    <h1>Thêm mới thông tin</h1>
+    <div class="wrap-head">
+        <p>Thanh điều khiển</p>
+        <span>/</span>
+        <a href="#">Thêm thông tin</a>
+    </div>
 
     <form method="post" action="/admin/info/store" class="form">
         @csrf

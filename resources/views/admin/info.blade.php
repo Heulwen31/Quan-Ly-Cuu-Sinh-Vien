@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <title>Info</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,17 +16,19 @@
 
     @section('homepage')
 
+    <div class="wrap-head">
+        <p>Thanh điều khiển</p>
+        <span>/</span>
+        <a href="#">Thông tin cá nhân</a>
+    </div>
+    
     <div class="wrap">
-        <h1>Thông tin cá nhân</h1>
-
-        <div class="line"></div>
-
-        <div class="add clearfix">
+        <!-- <div class="add clearfix">
             <a href="/admin/info/create" class="tools-link tools-link-add head-link">
                 Thêm thông tin <i class="fa fa-plus-square"></i></a>
             <a href="/file-import-export" class="tools-link tools-link-add excel head-link">
                 Nhập/Xuất file excel</a>
-        </div>
+        </div> -->
 
         <table class="content-table">
             <thead>
@@ -152,7 +155,7 @@
                         </form>
                     </td>
                     <td class="tools">
-                        <a href="" class="tools-link tools-link-edit">
+                        <a href="/admin/info/{{$row->id}}" class="tools-link tools-link-edit">
                             Chi tiết <i class="fa fa-edit"></i></a>
                         <form method="POST" action="/admin/info/delete/{{$row->id}}">
                             @method('DELETE')

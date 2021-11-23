@@ -812,7 +812,7 @@
 
         channel.bind('event-chat-admin', function (data) {
             $(".messages").animate({scrollTop: $(document).height()}, "fast");
-            $('<li class="replies"><img src="https://vi-magento.com/wp-content/uploads/2020/09/ASSET-USER-ADMIN.png" alt="" /><p>' + data.message + '</p></li>').appendTo($('.messages ul'));
+            $('<li class="replies"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="" /><p>' + data.message + '</p></li>').appendTo($('.messages ul'));
         });
 
 //# sourceURL=pen.js

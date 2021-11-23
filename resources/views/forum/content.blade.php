@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
     @extends('home_page')
 
     @section('homepage')
@@ -25,22 +26,27 @@
     <div class="wrap">
         <div class="subforum-title">
             <h1>Diễn đàn trao đổi</h1>
+            <h2>{{ $contents->title }}</h2>
         </div>
 
-        <form id="form" action="add" method="post">
-            @csrf
-
-            <label for="">Chủ đề*</label>
-            <input class="empty_box" type="text" name="title"> <br>
-            <div class="message">
-                <label for="">Thông điệp*</label>
-                <textarea class="tex" name="content" id=""></textarea> <br>
+        <div class="forum1 center">
+            <img class="profile1-image"
+                src="{{ Storage::url( $contents->userpath ) }}"
+                alt="">
+            <div class="name">
+                <p>{{ $contents->title }}</p>
+                <small>bởi  </small>{{ $contents->username }} vào ngày  <small>{{ $contents->time }}</small>
             </div>
-            <button type="submit" class="btn0">Đăng lên diễn đàn</button>
+        </div>
+        <div class="nd">
+            <p>{{ $contents->content }}</p>
+        </div>
+        <div class="back_Home1">
             <a href="/forum">
-                <span class="btn1">Hủy bỏ</span>
+                <span class="icon"><i class="fas fa-arrow-left"></i></span>
+                <span class="title1">Trở về</span>
             </a>
-        </form>
+        </div>
     </div>
 
     @endsection

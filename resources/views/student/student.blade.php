@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <title>Info</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,11 +16,13 @@
 
     @section('homestudent')
 
+    <div class="wrap-head">
+        <p>Thanh điều khiển</p>
+        <span>/</span>
+        <a href="#">Thông tin cá nhân</a>
+    </div>
+
     <div class="wrap">
-        <h1>Thông tin cá nhân</h1>
-
-        <div class="line"></div>
-
         <table class="content-table">
             <thead>
                 <tr>

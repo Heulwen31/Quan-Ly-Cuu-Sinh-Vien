@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <title>Home</title>
 
     <link rel="stylesheet" type="text/css" href="{{ url('css/home_admin.css') }}">
@@ -16,9 +17,9 @@
     @section('homepage')
 
     <div class="wrap">
-        <h1>Tổng quan</h1>
-
-        <div class="line"></div>
+        <p>Thanh điều khiển</p>
+        <span>/</span>
+        <a href="/home">Tổng quan</a>
     </div>
 
     <div class="row">
@@ -37,6 +38,21 @@
         <a href="/file-import-export" class="column col-excel">
             <p class="content">Nhập/Xuất file excel</p>
             <i class="fa fa-file-excel col-icon col-icon-excel" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <div class="row row2">
+        <a href="/admin/chat" class="column col-chat">
+            <p class="content">Chat</p>
+            <i class="fa fa-paper-plane col-icon col-icon-chat" aria-hidden="true"></i>
+        </a>
+        <a href="" class="column col-statis">
+            <p class="content">Thống kê</p>
+            <i class="fa fa-chart-bar col-icon col-icon-statis" aria-hidden="true"></i>
+        </a>
+        <a href="/receive-fb" class="column col-feedback">
+            <p class="content">Phản hồi</p>
+            <i class="fa fa-comments col-icon col-icon-feedback" aria-hidden="true"></i>
         </a>
     </div>
 

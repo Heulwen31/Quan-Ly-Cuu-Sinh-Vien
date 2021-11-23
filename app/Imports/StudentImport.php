@@ -25,17 +25,21 @@ class StudentImport implements ToModel
      */
     public function model(array $row)
     {
-        return new Student([
-            //
-            'id' => $row[3],
-            'cccd' => $row[4],
-            'name' => $row[0],
-            'sex' => $row[5],
-            'birth' => $this->transformDate($row[6]),
-            'email' => $row[1],
-            'phone' => $row[7],
-            'address' => $row[8],
-            'job' => $row[9],
-        ]);
+        $isStudent = Student::where('id', $row[3])->first();
+
+        if (!$isStudent) {
+            $student = new Student([
+                'id' => $row[3],
+                'cccd' => $row[4],
+                'name' => $row[0],
+                'sex' => $row[5],
+                'birth' => $this->transformDate($row[6]),
+                'email' => $row[1],
+                'phone' => $row[7],
+                'address' => $row[8],
+                'job' => $row[9],
+            ]);    
+            return $student;
+        }
     }
 }

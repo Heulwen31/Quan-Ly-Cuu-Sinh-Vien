@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <title>Account</title>
 
     <link rel="stylesheet" type="text/css" href="{{ url('css/account.css') }}">
@@ -12,6 +13,12 @@
     @extends('home_page')
 
     @section('homepage')
+
+    <div class="wrap-head">
+        <p>Thanh điều khiển</p>
+        <span>/</span>
+        <a href="#">Tài khoản</a>
+    </div>
 
     <div class="wrap-container">
         <div class="form-1">
@@ -81,7 +88,7 @@
 
         function checkPass() {
             if (pass.value != cf_pass.value) {
-                mess.innerHTML = "Mật khẩu nhập lại không đúng";
+                mess.innerHTML = "Mật khẩu nhập lại không đúng!";
                 mess.className = "alert alert-danger";
                 return false;
             } else {

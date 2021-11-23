@@ -32,12 +32,9 @@ class InsertContentController extends Controller
         $title = $request->input('title');
         $content = $request->input('content');
         $date = Carbon::now();
-        //$isData = User::where('id_student', auth()->user()->id_student)->first();
-
-        //if (!$isData) {
-            $data = array('title' => $title, 'content' => $content, 'time' => $date, 'id_author' => auth()->user()->id_student);
-            DB::table('forum')->insert($data);
-        //}
+        $data = array('title' => $title, 'content' => $content, 'time' => $date, 
+                'id_author' => auth()->user()->id_student, 'username' => auth()->user()->name, 'userpath' => auth()->user()->path);
+        DB::table('forum')->insert($data);
 
         return redirect()->action('App\Http\Controllers\ForumController@show');
     }
@@ -47,12 +44,9 @@ class InsertContentController extends Controller
         $title = $request->input('title');
         $content = $request->input('content');
         $date = Carbon::now();
-        $isData = User::where('id_student', auth()->user()->id_student)->first();
-
-        if (!$isData) {
-            $data = array('title' => $title, 'content' => $content, 'time' => $date, 'id_author' => auth()->user()->id_student);
-            DB::table('forum')->insert($data);
-        }
+        $data = array('title' => $title, 'content' => $content, 'time' => $date, 
+                'id_author' => auth()->user()->id_student, 'username' => auth()->user()->name, 'userpath' => auth()->user()->path);
+        DB::table('forum')->insert($data);
 
         return redirect()->action('App\Http\Controllers\ForumController@showStudent');
     }

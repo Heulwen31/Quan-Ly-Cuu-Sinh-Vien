@@ -1,7 +1,38 @@
 body {
     position: relative;
     box-sizing: border-box;
-  }
+}
+
+.wrap-head{
+  position: absolute;
+  top: 0;
+  left: 16%;
+  font-size: 17px;
+  padding-top: 12px;
+  padding-left: 3px;
+  margin-bottom: 16px;
+  z-index: 1;
+}
+
+.wrap-head p{
+  color: black;
+  display: inline-block;
+}
+
+.wrap-head span{
+  color: rgb(202, 191, 191);
+}
+
+.wrap-head a{
+  color: black;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.wrap-head a:hover{
+  text-decoration: none;
+  color: rgb(106, 6, 199)
+}
   
 .wrap-container{
     position: absolute;
@@ -12,12 +43,12 @@ body {
 }
 
 .form-1{
-  margin-right: 50px;
+  transform: translate(70px, 40px);
 }
 
 .wrap-avatar{
-  width: 500px;
-  height: 500px;
+  width: 350px;
+  height: 350px;
   clip-path: circle(50% at 50% 50%);
 }
 
@@ -31,7 +62,7 @@ body {
   margin-left: 50px;
   margin-top: 10px;
   padding: 10px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .wrap-submit-1{
@@ -40,7 +71,7 @@ body {
 }
 
 .submit{
-  padding: 10px 20px;
+  padding: 8px 20px;
   border: 1px solid blueviolet;
   border-radius: 5px;
   background-color: blueviolet;
@@ -48,9 +79,9 @@ body {
 }
 
 .form-2{
-  transform: translate(30%, 20%);
+  transform: translate(50%, 14%);
   background-color: #fff;
-  padding: 50px;
+  padding: 40px;
   height: 50%;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -64,14 +95,15 @@ body {
 .wrap-label{
   width: 50%;
   margin-right: 14px;
-  font-size: 18px;
+  margin-top: 6px;
+  font-size: 14px;
 }
 
 .wrap-input{
   border: 1px solid burlywood;
   border-radius: 5px;
   padding: 5px 10px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .success-mess{
@@ -82,4 +114,9 @@ body {
 .error-mess{
   width: 70%;
   margin-left: 60px;
+  font-size: 14px;
+}
+
+#mess-different{
+  font-size: 14px;
 }

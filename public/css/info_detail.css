@@ -111,9 +111,5 @@ a{
 }
 
 .active-view {
-    background-color: #806cee;
+    color: #fff !important;
 }
-
-.active {
-    background-image: linear-gradient(90deg, #2641dd, #2d4af0);
-  }

@@ -4,6 +4,7 @@ use App\Http\Controllers\ChartController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\InsertContentController;
+use App\Http\Controllers\InsertFeedbackController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ViewAccountController;
 
@@ -73,6 +74,8 @@ Route::get('/homestudent', function () {
 //
 Route::get('/forum', 'App\Http\Controllers\ForumController@show');
 Route::get('/forumstudent', 'App\Http\Controllers\ForumController@showStudent');
+Route::get('/content/{id}', 'App\Http\Controllers\ForumController@content');
+Route::get('/contentstudent/{id}', 'App\Http\Controllers\ForumController@contentStudent');
 
 
 //
@@ -81,7 +84,15 @@ Route::get('indexstudent', [InsertContentController::class, 'indexStudent']);
 Route::post('add', [InsertContentController::class, 'add']);
 Route::post('addstudent', [InsertContentController::class, 'addStudent']);
 
+//
+Route::get('receive-fb', 'App\Http\Controllers\FeedbackController@show');
 
+//
+Route::get('feedback', [InsertFeedbackController::class, 'index']);
+Route::post('addfeedback', [InsertFeedbackController::class, 'add']);
+
+
+//
 Route::get('file-import-export', [UserController::class, 'fileImportExport']);
 Route::post('file-import', [UserController::class, 'fileImport'])->name('file-import');
 Route::get('file-export', [UserController::class, 'fileExport'])->name('file-export');

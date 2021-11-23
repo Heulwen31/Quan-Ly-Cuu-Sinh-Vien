@@ -2,12 +2,42 @@ body {
     position: relative;
     box-sizing: border-box;
     overflow: scroll;
-  }
+}
+
+.wrap-head{
+    position: absolute;
+    top: 0;
+    left: 16%;
+    font-size: 17px;
+    padding-top: 12px;
+    padding-left: 3px;
+    margin-bottom: 16px;
+}
+
+.wrap-head p{
+    color: black;
+    display: inline-block;
+}
+
+.wrap-head span{
+    color: rgb(202, 191, 191);
+}
+
+.wrap-head a{
+    color: black;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.wrap-head a:hover{
+    text-decoration: none;
+    color: rgb(106, 6, 199)
+}
   
 .wrap{
-    position: absolute;
-    top: 10%;
-    left: 15.5%;
+    margin-top: 50px;
+    margin-left: 235px;
+    margin-bottom: 40px;
 }
 
 h1{
@@ -121,13 +151,8 @@ a{
 }
 
 .active-view {
-    background-color: #806cee;
+    color: #fff !important;
 }
-
-.active {
-    background-image: linear-gradient(90deg, #2641dd, #2d4af0);
-}
-
 
 
 /* -------------------------------- */
