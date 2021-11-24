@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="{{ csrf_token() }}"/>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>Chart</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <link rel="stylesheet" type="text/css" href="{{ url('css/statistic.css') }}">
@@ -13,7 +13,6 @@
 
 <body>
     @extends('home_page')
-
     @section('homepage')
 
     <div class="wrap-head">
@@ -22,15 +21,15 @@
         <a href="#">Thống kê</a>
     </div>
 
-    <div class="select">
-        <button id="btn1" class="button" onclick="click1()">
-            Thống kê số lượng xếp hạng cựu sinh viên
+    <div class="select d-grid gap-2 d-md-flex justify-content-md-end">
+        <button id="btn1" class="button btn btn-secondary" onclick="click1()">
+            Xếp hạng 
         </button>
-        <button id="btn2" class="button" onclick="click3()">
-            Thống kê theo khu vực
+        <button id="btn2" class="button btn btn-secondary" onclick="click3()">
+            Khu vực
         </button>
-        <button id="btn3" class="button" onclick="click2()">
-            Thống kê cựu sinh viên thất nghiệp - có việc làm
+        <button id="btn3" class="button btn btn-secondary" onclick="click2()">
+            Tình trạng
         </button>
     </div>
 
