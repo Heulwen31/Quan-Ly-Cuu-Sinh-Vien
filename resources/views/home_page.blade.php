@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="{{ csrf_token() }}"/>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>Home</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
@@ -34,8 +34,7 @@
 
                 <div class="dropdown-menu xy" aria-labelledby="dropdownMenuLink">
                     <a class="dropdown-item item" href="{{ url('account') }}"><i class="fa fa-user" aria-hidden="true"></i>Tài khoản</a>
-                    <a class="dropdown-item item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
+                    <a class="dropdown-item item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
                         <span class="icon"><i class="fa fa-sign-out-alt" aria-hidden="true"></i></span>
                         <span class="title-logout">Đăng xuất</span>
@@ -50,7 +49,7 @@
 
     <section>
         <nav>
-            <input type="checkbox" id="toggle" style="dislay: none;" onclick="changeColor()">
+            <input type="checkbox" id="toggle" onclick="changeColor()">
             <label class="side-toggle" for="toggle">
                 <span class="fa fa-bars"></span>
             </label>
