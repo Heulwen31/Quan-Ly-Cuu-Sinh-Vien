@@ -88,13 +88,25 @@
                     <li class="list">
                         <a href="/feedback">
                             <span class="icon active-feedback"><i class="fa fa-comments" aria-hidden="true"></i></span>
-                            <span class="title active-feedback">Phản hồi</span>
+                            <span class="title active-feedback">Báo cáo</span>
                         </a>
                     </li>
                     <li class="list">
                         <a href="/forumstudent">
                             <span class="icon active-forum"><i class="fa fa-users" aria-hidden="true"></i></span>
                             <span class="title active-forum">Diễn đàn</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="/notification">
+                            <span class="icon active-contact"><i class="fa fa-flag" aria-hidden="true"></i></span>
+                            <span class="title active-contact">Thông báo</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="/donate">
+                            <span class="icon active-donate"><i class="fa fa-donate" aria-hidden="true"></i></span>
+                            <span class="title active-donate">Ủng hộ</span>
                         </a>
                     </li>
                 </ul>

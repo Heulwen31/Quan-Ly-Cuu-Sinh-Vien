@@ -20,4 +20,12 @@ class FeedbackController extends Controller
         $contents = DB::select('select * from feedback');
         return view('admin.receive_feedback')->with('contents', $contents);
     }
+
+    public function destroy($id)
+    {
+        $feedback = Feedback::find($id);
+
+        $feedback->delete();
+        return redirect('receive-fb');
+    }
 }

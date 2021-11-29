@@ -94,15 +94,27 @@
                         </a>
                     </li>
                     <li class="list">
-                        <a href="/receive-fb">
-                            <span class="icon active-feedback"><i class="fa fa-comments" aria-hidden="true"></i></span>
-                            <span class="title active-feedback">Phản hồi</span>
-                        </a>
-                    </li>
-                    <li class="list">
                         <a href="/forum">
                             <span class="icon active-forum"><i class="fa fa-users" aria-hidden="true"></i></span>
                             <span class="title active-forum">Diễn đàn</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="/receive-fb">
+                            <span class="icon active-feedback"><i class="fa fa-comments" aria-hidden="true"></i></span>
+                            <span class="title active-feedback">Báo cáo</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="/contact">
+                            <span class="icon active-contact"><i class="fa fa-flag" aria-hidden="true"></i></span>
+                            <span class="title active-contact">Liên hệ</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="/listdonate">
+                            <span class="icon active-donate"><i class="fa fa-donate" aria-hidden="true"></i></span>
+                            <span class="title active-donate">Ủng hộ</span>
                         </a>
                     </li>
                 </ul>

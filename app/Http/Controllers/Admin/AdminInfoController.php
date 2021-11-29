@@ -166,25 +166,8 @@ class AdminInfoController extends Controller
     public function update2(Request $request, $id)
     {
         $student = Student::find($id);
-        // $study_detail = Student::find($id)->study;
-
-        // $student->id = $request->id;
         $student->name = $request->name;
-        // $student->sex = $request->sex;
-        // $student->birth = $request->birth;
-        // $student->email = $request->email;
-        // $student->phone = $request->phone;
-        // $student->address = $request->address;
-        // $student->job = $request->job;
         $student->save();
-
-        // $study_detail->consultant = $request->consultant;
-        // $study_detail->cpa = $request->cpa;
-        // $study_detail->point_training = $request->point_training;
-        // $study_detail->faculty = $request->faculty;
-        // $study_detail->course = $request->course;
-        // $study_detail->save();
-
         return redirect('admin/info');
     }
     public function update3(Request $request, $id)

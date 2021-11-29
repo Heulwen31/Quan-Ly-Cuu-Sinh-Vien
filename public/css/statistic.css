@@ -34,20 +34,20 @@
 /* ----------------- */
 .select{
     margin-top: 50px;
-    margin-left: 430px;
+    margin-left: 275px;
 }
 
 .columns{
     margin-left: 275px;
-    margin-top: 70px;
+    margin-top: 25px;
     margin-bottom: 160px;
 }
 
 .button{
     border: none;
-    padding: 5px 10px;
+    padding: 8px 14px;
     background-color: rgb(138, 136, 133);
-    margin-right: 25px;
+    margin-right: 10px;
     color: #fff;
     border-radius: 0.25rem;
     transition: all .15s;
@@ -55,6 +55,10 @@
 
 .button:hover{
     color: #000;
+}
+
+.button:focus{
+  outline: none;
 }
 
 .active-statis{

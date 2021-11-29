@@ -1,0 +1,69 @@
+body{
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  .wrap-head{
+    position: absolute;
+    top: 0;
+    left: 16%;
+    font-size: 17px;
+    padding-top: 12px;
+    padding-left: 3px;
+    margin-bottom: 16px;
+    z-index: 1;
+  }
+  
+  .wrap-head p{
+    color: black;
+    display: inline-block;
+  }
+  
+  .wrap-head span{
+    color: rgb(202, 191, 191);
+  }
+  
+  .wrap-head a{
+    color: black;
+    text-decoration: none;
+    transition: all .3s;
+  }
+  
+  .wrap-head a:hover{
+    text-decoration: none;
+    color: rgb(106, 6, 199)
+  }
+  
+  .wrap{
+    margin-top: 60px;
+    margin-left: 260px;
+
+  }
+
+.content-table{
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+th, td{
+  padding: 20px 25px;
+  padding-right: 90px;
+}
+
+.content-table th:last-child,
+.content-table td:last-child {
+  width: 320px;
+  padding-right: 0;
+}
+
+th{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  color: rgb(163, 43, 63);
+  font-size: 17px;
+}
+
+.active-donate {
+  color: #fff !important;
+}
+

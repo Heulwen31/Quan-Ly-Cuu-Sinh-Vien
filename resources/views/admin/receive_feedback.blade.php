@@ -28,15 +28,31 @@
             @foreach ($contents as $content)
             <li class="list-child">
                 <div class="left">
-                    <img src="{{ Storage::url( $content->userpath ) }}" class="image">
+                    <div class="wrap-avatar">
+                        <img src="{{ Storage::url( $content->userpath ) }}" class="avatar">
+                    </div>
                     <p>{{ $content->username }}</p>
                 </div>
                 <h3>{{ $content->title }}</h3>
-                <p>{{ $content->content }}</p>
+                <p>{{ $content->content }}</p> 
             </li>
+            <form method="POST" action="/feedback/delete/{{$content->id}}">
+                @method('DELETE')
+                @csrf
+                <button type="submit" onclick="return confirmDel();" class="link">
+                    <i class="fa fa-times"></i></button>
+            </form>
             @endforeach
         </ul>
     </div>
+
+    <script>
+        function confirmDel() {
+            if (!confirm("Bạn có muốn xóa không?")) {
+                return false;
+            }
+        }
+    </script>
 
     @endsection
 </body>

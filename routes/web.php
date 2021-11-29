@@ -7,6 +7,8 @@ use App\Http\Controllers\InsertContentController;
 use App\Http\Controllers\InsertFeedbackController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ViewAccountController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DonateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -86,6 +88,7 @@ Route::post('addstudent', [InsertContentController::class, 'addStudent']);
 
 //
 Route::get('receive-fb', 'App\Http\Controllers\FeedbackController@show');
+Route::delete('/feedback/delete/{id}', 'App\Http\Controllers\FeedbackController@destroy');
 
 //
 Route::get('feedback', [InsertFeedbackController::class, 'index']);
@@ -129,3 +132,14 @@ Route::prefix('admin/chat')->name('admin.chat.')->group(function () {
  * view chart 
  */
 Route::get('chart', [ChartController::class, 'statistic2']);
+
+
+//Donate
+Route::get('donate', [DonateController::class, 'index']);
+Route::post('adddonate', [DonateController::class, 'add']);
+Route::get('listdonate', [DonateController::class, 'show']);
+
+//Contact
+Route::get('contact', [ContactController::class, 'index']);
+Route::post('addcontact', [ContactController::class, 'add']);
+Route::get('notification', [ContactController::class, 'show']);

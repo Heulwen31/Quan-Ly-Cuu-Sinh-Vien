@@ -1,0 +1,135 @@
+body{
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  .wrap-head{
+    position: absolute;
+    top: 0;
+    left: 16%;
+    font-size: 17px;
+    padding-top: 12px;
+    padding-left: 3px;
+    margin-bottom: 16px;
+    z-index: 1;
+  }
+  
+  .wrap-head p{
+    color: black;
+    display: inline-block;
+  }
+  
+  .wrap-head span{
+    color: rgb(202, 191, 191);
+  }
+  
+  .wrap-head a{
+    color: black;
+    text-decoration: none;
+    transition: all .3s;
+  }
+  
+  .wrap-head a:hover{
+    text-decoration: none;
+    color: rgb(106, 6, 199)
+  }
+  
+  .wrap{
+    margin-top: 80px;
+    margin-left: 300px;
+    display: flex;
+  }
+
+.content{
+  margin-right: 80px;
+  width: 45%;
+  margin-top: -25px;
+}
+
+.content-img{
+  width: 300px;
+  margin-left: 100px;
+}
+
+.content p{
+  margin-left: 25px;
+}
+
+.form{
+  width: 35%;
+  height: 450px;
+  background-color: rgba(231, 133, 150, 0.2);
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.heading-img{
+  width: 50px;
+  border: none;
+  transform: translateY(-7px);
+}
+
+.heading{
+  margin-top: 10px;
+}
+
+h2{
+  font-size: 20px;
+  color: #2f3492;
+  display: inline-block;
+}
+
+.heading{
+  margin-bottom: 40px;
+}
+
+.input{
+  width: 90%;
+  height: 60px;
+  display: block;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 18px;
+}
+
+.message{
+  height: 100px;
+}
+
+.label{
+  position: relative;
+  color: rgba(0, 0, 0, 0.5);
+  transition: all .1s;
+}
+
+.label1{
+  top: -42px;
+  left: -120px;
+}
+
+.label2{
+  top: -90px;
+  left: -140px;
+  margin-bottom: -40px;
+}
+
+.input:focus{
+  border: 1px solid rgba(165, 42, 42, 0.5);
+}
+
+.submit{
+  font-size: 17px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background-color: #f4f4fb;
+  padding: 10px 40px;
+  color: rgb(139, 5, 5);
+  margin-top: 25px;
+  border-radius: 5px;
+}
+  
+.active-donate {
+  color: #fff !important;
+}
+  

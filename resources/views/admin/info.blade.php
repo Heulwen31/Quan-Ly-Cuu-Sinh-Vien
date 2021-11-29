@@ -165,7 +165,7 @@
 
     <script>
         function confirmDel() {
-            if (!confirm("Bạn chắc chắn muốn xóa toàn bộ dữ liệu về sinh viên này?")) {
+            if (!confirm("Bạn có muốn xóa không?")) {
                 return false;
             }
         }
