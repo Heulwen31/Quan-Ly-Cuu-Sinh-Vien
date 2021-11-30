@@ -69,31 +69,66 @@
 
     <div class="honors">
         <h1>Vinh danh sinh viên thành tích xuất sắc</h1>
-        <div class="honors-card">
-            <div class="card-box box1">
-                <img src="{{ url('img/male.png') }}" class="card-image" alt="">
-                <h3>Trần Văn Bắc</h3>
-                <p>Khoa công nghệ thông tin</p>
-                <label for="" class="label1">3.82</label>
+
+        <div class="slider">
+            <div class="slide" id="slide-1">
+                <div class="card-box box1">
+                    <img src="{{ url('img/male.png') }}" class="card-image" alt="">
+                    <h3>Trần Văn Bắc</h3>
+                    <p>Khoa công nghệ thông tin</p>
+                    <label for="" class="label1">3.82</label>
+                </div>
+                <div class="card-box box2">
+                    <img src="{{ url('img/female_color.png') }}" class="card-image" alt="">
+                    <h3>Nguyễn Thị Linh</h3>
+                    <p>Khoa công nghệ thông tin</p>
+                    <label for="" class="label1">3.96</label>
+                </div>
+                <div class="card-box box3">
+                    <img src="{{ url('img/knowledge.png') }}" class="card-image" alt="">
+                    <h3>Trần Đồng Nam</h3>
+                    <p>Khoa công nghệ thông tin</p>
+                    <label for="" class="label1">4.00</label>
+                </div>
+                <div class="card-box box4">
+                    <img src="{{ url('img/male_color.png') }}" class="card-image" alt="">
+                    <h3>Đặng Văn Cường</h3>
+                    <p>Khoa công nghệ thông tin</p>
+                    <label for="" class="label1">3.91</label>
+                </div>              
             </div>
-            <div class="card-box box2">
-                <img src="{{ url('img/female_color.png') }}" class="card-image" alt="">
-                <h3>Nguyễn Thị Linh</h3>
-                <p>Khoa công nghệ thông tin</p>
-                <label for="" class="label1">3.96</label>
+
+            <div class="slide" id="slide-2">
+                <div class="card-box box5">
+                    <img src="{{ url('img/male_color.png') }}" class="card-image" alt="">
+                    <h3>Trần Quang Việt</h3>
+                    <p>Khoa công nghệ thông tin</p>
+                    <label for="" class="label1">3.79</label>
+                </div>
+                <div class="card-box box6">
+                    <img src="{{ url('img/female.png') }}" class="card-image" alt="">
+                    <h3>Đỗ Thị Hòa</h3>
+                    <p>Khoa công nghệ thông tin</p>
+                    <label for="" class="label1">3.80</label>
+                </div>
+                <div class="card-box box7">
+                    <img src="{{ url('img/knowledge.png') }}" class="card-image" alt="">
+                    <h3>Nguyễn Đình Phi</h3>
+                    <p>Khoa công nghệ thông tin</p>
+                    <label for="" class="label1">4.00</label>
+                </div>
+                <div class="card-box box8">
+                    <img src="{{ url('img/male.png') }}" class="card-image" alt="">
+                    <h3>Vũ Văn Phong</h3>
+                    <p>Khoa công nghệ thông tin</p>
+                    <label for="" class="label1">3.95</label>
+                </div>              
             </div>
-            <div class="card-box box3">
-                <img src="{{ url('img/knowledge.png') }}" class="card-image" alt="">
-                <h3>Trần Đồng Nam</h3>
-                <p>Khoa công nghệ thông tin</p>
-                <label for="" class="label1">4.00</label>
-            </div>
-            <div class="card-box box4">
-                <img src="{{ url('img/male_color.png') }}" class="card-image" alt="">
-                <h3>Đặng Văn Cường</h3>
-                <p>Khoa công nghệ thông tin</p>
-                <label for="" class="label1">3.91</label>
-            </div>
+        </div>
+
+        <div class="wrap-slide">
+            <a href="#slide-1" class="link-slide"></a>
+            <a href="#slide-2" class="link-slide"></a>
         </div>
     </div>
 

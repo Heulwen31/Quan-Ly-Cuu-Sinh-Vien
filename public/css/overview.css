@@ -208,8 +208,19 @@
     text-transform: uppercase;
 }
 
-.honors-card{
+.slider{
+    height: 90%;
     display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+.slide{
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .card-box h3{
@@ -293,8 +304,59 @@
     border-top: 3.5px solid rgb(238, 172, 50);
 }
 
+.box5{
+    background-color: rgb(155, 148, 148);
+}
+
+.box5::after{
+    border-top: 3.5px solid rgb(155, 148, 148);
+}
+
+.box6{
+    background-color: rgb(245, 50, 50);
+}
+
+.box6::after{
+    border-top: 3.5px solid rgb(245, 50, 50);
+}
+
+.box7{
+    background-color: rgb(119, 56, 56);
+}
+
+.box7::after{
+    border-top: 3.5px solid rgb(119, 56, 56);
+}
+
+.box8{
+    background-color: rgb(190, 156, 110);
+}
+
+.box8::after{
+    border-top: 3.5px solid rgb(190, 156, 110);
+}
+
 .card-image{
     width: 100px;
     height: 100px;
     object-fit: cover;
+}
+
+.wrap-slide{
+    margin-top: 20px;
+    transform: translateX(-12px);
+}
+
+.link-slide{
+    height: 18px;
+    width: 18px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.link-slide:hover {
+    background-color: #717171;
 }
