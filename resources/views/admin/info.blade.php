@@ -123,7 +123,7 @@
                         <form method="post" action="/admin/info/update5/{{ $row->id }}" class="form" onsubmit="updateInfo();">
                             @method('PATCH')
                             @csrf
-                            <input class="wrap-input input-birth" id="dt" type="text" name="birth" value="{{$row->birth}}">
+                            <input class="wrap-input input-birth" id="dt" type="text" name="birth" value="{{\Carbon\Carbon::parse($row->birth)->format('d/m/Y')}}">
                         </form>
                     </td>
                     <td>

@@ -52,7 +52,7 @@
                         alt="">
                     <div class="name">
                         <p>{{$content->username}}</p>
-                        <small>{{$content->time}}</small>
+                        <small>{{\Carbon\Carbon::parse($content->time)->format('d-m-Y')}}</small>
                     </div>
                 </div>
             </div>

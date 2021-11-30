@@ -35,7 +35,7 @@
                 alt="">
             <div class="name">
                 <p>{{ $contents->title }}</p>
-                <small>bởi  </small>{{ $contents->username }} vào ngày  <small>{{ $contents->time }}</small>
+                <small>bởi  </small>{{ $contents->username }} vào ngày  <small>{{ \Carbon\Carbon::parse($contents->time)->format('d-m-Y') }}</small>
             </div>
         </div>
         <div class="nd">

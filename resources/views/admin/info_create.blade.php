@@ -52,9 +52,10 @@
             
             <div class="wrap">
                 <label for="sex" class="wrap-label">Giới tính</label>
-                <input type="text" name="sex" id="sex"
-                    class="wrap-content" placeholder="Nhập" 
-                    onkeypress="return run(event, this.id)">
+                <select name="sex" id="sex" class="wrap-content">
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                </select>
                 <span class="error-message">{{$errors->first('sex')}}</span>
             </div>
             

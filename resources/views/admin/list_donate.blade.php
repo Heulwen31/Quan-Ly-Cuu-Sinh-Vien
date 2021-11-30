@@ -39,7 +39,7 @@
                     <td>{{ $donate->id_author }}</td>
                     <td>{{ $donate->username }}</td>
                     <td>{{ $donate->money }}</td>
-                    <td>{{ $donate->time }}</td>
+                    <td>{{ \Carbon\Carbon::parse($donate->time)->format('d/m/Y') }}</td>
                     <td>{{ $donate->message }}</td>
                 </tr>
                 @endforeach
