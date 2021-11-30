@@ -17,7 +17,7 @@
     <div class="wrap-head">
         <p>Thanh điều khiển</p>
         <span>/</span>
-        <a href="#">Phản hồi</a>
+        <a href="#">Báo cáo</a>
     </div>
 
     <div class="wrap">

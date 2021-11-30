@@ -21,7 +21,7 @@ class ContactController extends Controller
 
     public function add(Request $request)
     {
-        $title = $request->input('title');
+        $title = $request->input('title') . "!";
         $content = $request->input('content');
         $id = $request->input('id');
         $data = array('title' => $title, 'content' => $content, 'id_author' => $id);
@@ -35,5 +35,13 @@ class ContactController extends Controller
         $contents = DB::table('contacts')->where('id_author', '=', auth()->user()->id_student);
         $contents = $contents->get();
         return view('student.notification')->with('contents', $contents);
+    }
+
+    public function destroy($id)
+    {
+        $contact = Contact::find($id);
+
+        $contact->delete();
+        return redirect('notification')->with('status', 'Xóa thành công');
     }
 }

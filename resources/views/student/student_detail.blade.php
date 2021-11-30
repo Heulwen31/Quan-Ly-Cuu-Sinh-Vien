@@ -16,15 +16,15 @@
 
     @section('homestudent')
 
+    <div class="wrap-head">
+        <p>Thanh điều khiển</p>
+        <span>/</span>
+        <a href="/student/info">Thông tin cá nhân</a>
+        <span>/</span>
+        <a href="#">Thông tin học tập</a>
+    </div>
+
     <div class="wrap">
-        <h1>Thông tin học tập cá nhân</h1>
-
-        <div class="line"></div>
-
-        <div class="back-to-view">
-            <a href="/student/info" class="btn-view">Thông tin cá nhân</a>
-        </div>
-
         <table class="content-table">
             <thead>
                 <tr>

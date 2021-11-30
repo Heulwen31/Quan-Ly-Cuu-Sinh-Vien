@@ -143,3 +143,4 @@ Route::get('listdonate', [DonateController::class, 'show']);
 Route::get('contact', [ContactController::class, 'index']);
 Route::post('addcontact', [ContactController::class, 'add']);
 Route::get('notification', [ContactController::class, 'show']);
+Route::delete('/contact/delete/{id}', 'App\Http\Controllers\ContactController@destroy');

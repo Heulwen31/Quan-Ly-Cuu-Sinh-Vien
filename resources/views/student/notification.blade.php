@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <title>Notification</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ url('css/contact.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('css/notification.css') }}">
 </head>
 <body>
     @extends('student/home_student')
@@ -22,8 +22,21 @@
 
     <div class="wrap">
         @foreach($contents as $content)
-        <h1>{{ $content->title }}</h1>
-        <p>{{ $content->content }}</p>
+        <div class="box">
+            <div class="box-icon">
+                <i class="fa fa-bell"></i>
+            </div>
+            <div class="content">
+                <h3>{{ $content->title }}</h3>
+                <p>{{ $content->content }}</p>
+                <form method="POST" action="/contact/delete/{{$content->id}}">
+                    @method('DELETE')
+                    @csrf
+                    <button type="submit" onclick="return confirmDel();" class="link">
+                        <i class="fa fa-times"></i></button>
+                </form>
+            </div>
+        </div>
         @endforeach 
     </div>
     

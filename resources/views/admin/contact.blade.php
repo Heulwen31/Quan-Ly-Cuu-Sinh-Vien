@@ -26,14 +26,21 @@
         <form action="/addcontact" method="post">
             @csrf
 
-            <label for="">Mã sinh viên</label>
-            <input type="text" name="id">
-            <label for="">Chủ đề</label>
-            <input type="text" name="title">
-            <label for="">Nội dung</label>
-            <textarea cols="30" rows="10" name="content"></textarea>
-            <button type="submit">Submit</button>
+            <h3>Liên hệ cựu sinh viên</h3>
+
+            <label for="" class="label label1">Mã sinh viên</label>
+            <input type="text" name="id" class="input" autocomplete="off">
+            <label for="" class="label label2">Chủ đề thông báo</label>
+            <input type="text" name="title" class="input">
+            <label for="" class="label label3">Nội dung thông báo</label>
+            <textarea name="content" style="resize: none;"></textarea>
+            <button type="submit" class="submit">Gửi</button>
         </form>
+
+        <div class="content">
+            <img src="{{ url('img/contact.png') }}" alt="">
+            <p>Liên hệ, thông báo với cựu sinh viên bằng biểu mẫu bên.</p>
+        </div>
     </div>
 
     <script>

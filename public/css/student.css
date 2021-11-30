@@ -34,27 +34,13 @@ body{
   
 .wrap{
     margin-top: 70px;
-    margin-left: 255px;
-}
-
-h1{
-    text-align: left;
-    font-size: 40px;
-    color: rgb(116, 175, 28);
-}
-
-.line{
-    border: none;
-    background-color: #46f7d3;
-    height: 1px;
-    margin-bottom: 40px;
-    margin-top: 50px;
+    margin-left: 245px;
 }
 
 .content-table {
     border-collapse: collapse;
-    font-size: 16px;
-    min-width: 400px;
+    font-size: 15px;
+    /* min-width: 400px; */
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -70,8 +56,8 @@ h1{
 
 .content-table th,
 .content-table td {
-    padding: 15px 25px;
-    width: 210px;
+    padding: 15px 15px;
+    width: 160px;
     border-right: 1px solid rgba(0, 0, 0, 0.3);
 }
 

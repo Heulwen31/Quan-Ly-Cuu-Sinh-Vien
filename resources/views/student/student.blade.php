@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" type="text/css" href="{{ url('css/info.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('css/student.css') }}">
 </head>
 <body>
     @extends('student/home_student')
@@ -19,7 +19,9 @@
     <div class="wrap-head">
         <p>Thanh điều khiển</p>
         <span>/</span>
-        <a href="#">Thông tin cá nhân</a>
+        <a href="student/info">Thông tin cá nhân</a>
+        <span>/</span>
+        <a href="#">Thông tin học tập</a>
     </div>
 
     <div class="wrap">

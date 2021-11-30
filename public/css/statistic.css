@@ -44,21 +44,7 @@
 }
 
 .button{
-    border: none;
-    padding: 8px 14px;
-    background-color: rgb(138, 136, 133);
     margin-right: 10px;
-    color: #fff;
-    border-radius: 0.25rem;
-    transition: all .15s;
-}
-
-.button:hover{
-    color: #000;
-}
-
-.button:focus{
-  outline: none;
 }
 
 .active-statis{

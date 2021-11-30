@@ -46,27 +46,56 @@
             <p class="content">Chat</p>
             <i class="fa fa-paper-plane col-icon col-icon-chat" aria-hidden="true"></i>
         </a>
-        <a href="" class="column col-statis">
+        <a href="/chart" class="column col-statis">
             <p class="content">Thống kê</p>
             <i class="fa fa-chart-bar col-icon col-icon-statis" aria-hidden="true"></i>
         </a>
         <a href="/receive-fb" class="column col-feedback">
-            <p class="content">Phản hồi</p>
-            <i class="fa fa-comments col-icon col-icon-feedback" aria-hidden="true"></i>
+            <p class="content">Báo cáo</p>
+            <i class="fa fa-exclamation-circle col-icon col-icon-feedback" aria-hidden="true"></i>
+        </a>
+        <a href="/contact" class="column col-contact">
+            <p class="content">Liên hệ</p>
+            <i class="fa fa-flag col-icon col-icon-contact" aria-hidden="true"></i>
         </a>
     </div>
 
-    <!--Table and divs that hold the pie charts-->
-    <table class="columns">
-        <tr>
-            <td>
-                <div id="Sarah_chart_div" style="border: 1px solid #ccc"></div>
-            </td>
-            <td>
-                <div id="columnchart_values" style="border: 1px solid #ccc"></div>
-            </td>
-        </tr>
-    </table>
+    <div class="row row3">
+        <a href="/listdonate" class="column col-donate">
+            <p class="content">Ủng hộ</p>
+            <i class="fa fa-donate col-icon col-icon-donate" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <div class="honors">
+        <h1>Vinh danh sinh viên thành tích xuất sắc</h1>
+        <div class="honors-card">
+            <div class="card-box box1">
+                <img src="{{ url('img/male.png') }}" class="card-image" alt="">
+                <h3>Trần Văn Bắc</h3>
+                <p>Khoa công nghệ thông tin</p>
+                <label for="" class="label1">3.82</label>
+            </div>
+            <div class="card-box box2">
+                <img src="{{ url('img/female_color.png') }}" class="card-image" alt="">
+                <h3>Nguyễn Thị Linh</h3>
+                <p>Khoa công nghệ thông tin</p>
+                <label for="" class="label1">3.96</label>
+            </div>
+            <div class="card-box box3">
+                <img src="{{ url('img/knowledge.png') }}" class="card-image" alt="">
+                <h3>Trần Đồng Nam</h3>
+                <p>Khoa công nghệ thông tin</p>
+                <label for="" class="label1">4.00</label>
+            </div>
+            <div class="card-box box4">
+                <img src="{{ url('img/male_color.png') }}" class="card-image" alt="">
+                <h3>Đặng Văn Cường</h3>
+                <p>Khoa công nghệ thông tin</p>
+                <label for="" class="label1">3.91</label>
+            </div>
+        </div>
+    </div>
 
     <script type="text/javascript">
         var list_col = document.getElementsByClassName("column");
@@ -93,7 +122,14 @@
         list_col[6].onmouseenter = function() {
             list_icon[6].style.transform = "scale(1.1)"
         }
+        list_col[7].onmouseenter = function() {
+            list_icon[7].style.transform = "scale(1.1)"
+        }
+        list_col[8].onmouseenter = function() {
+            list_icon[8].style.transform = "scale(1.1)"
+        }
 
+        // 
         list_col[0].onmouseleave = function() {
             list_icon[0].style.transform = "scale(1)"
         }
@@ -114,6 +150,12 @@
         }
         list_col[6].onmouseleave = function() {
             list_icon[6].style.transform = "scale(1)"
+        }
+        list_col[7].onmouseleave = function() {
+            list_icon[7].style.transform = "scale(1)"
+        }
+        list_col[8].onmouseleave = function() {
+            list_icon[8].style.transform = "scale(1)"
         }
 
         google.charts.load('current', {
@@ -188,7 +230,7 @@
             ]);
 
             var options = {
-                title: "Thông kê số lượng xếp hạng sinh viên",
+                title: "Thống kê số lượng xếp hạng sinh viên",
                 width: 650,
                 height: 600,
                 bar: {

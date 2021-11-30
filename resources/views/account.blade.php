@@ -50,7 +50,8 @@
         </div>
 
         <div class="form-2">
-            <form method="post" action="/account/{{ Auth::user()->id }}" onsubmit="return checkPass(this);">
+            <form method="post" action="/account/{{ Auth::user()->id }}" 
+                onsubmit="return checkPass(this);" autocomplete="off">
                 @method('PATCH')
                 @csrf
 
@@ -66,12 +67,12 @@
 
                 <div class="wrap">
                     <label for="pass" class="wrap-label">Mật khẩu mới</label>
-                    <input type="password" name="pass" id="pass" class="wrap-input">
+                    <input type="password" name="pass" autocomplete="new-password" id="pass" class="wrap-input">
                 </div>
 
                 <div class="wrap">
                     <label for="cf-pass" class="wrap-label">Xác nhận mật khẩu</label>
-                    <input type="password" name="cf_pass" id="cf_pass" class="wrap-input">
+                    <input type="password" name="cf_pass"  autocomplete="new-password" id="cf_pass" class="wrap-input">
                 </div>
                 <div id="mess-different"></div>
                 <div class="wrap-submit-2">

@@ -87,7 +87,7 @@
                     </li>
                     <li class="list">
                         <a href="/feedback">
-                            <span class="icon active-feedback"><i class="fa fa-comments" aria-hidden="true"></i></span>
+                            <span class="icon active-feedback"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></span>
                             <span class="title active-feedback">Báo cáo</span>
                         </a>
                     </li>

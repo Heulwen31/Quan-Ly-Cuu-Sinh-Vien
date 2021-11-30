@@ -18,64 +18,56 @@
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>
     
     <style class="cp-pen-styles">
-    body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: #27ae60;
-    font-family: "proxima-nova", "Source Sans Pro", sans-serif;
-    font-size: 1em;
-    letter-spacing: 0.1px;
-    color: #32465a;
-    text-rendering: optimizeLegibility;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-    -webkit-font-smoothing: antialiased;
-    }
+
+        .wrap-head{
+            position: absolute;
+            top: 0;
+            left: 16%;
+            font-size: 17px;
+            padding-top: 12px;
+            padding-left: 3px;
+            margin-bottom: 16px;
+        }
+
+        .wrap-head p{
+            color: black;
+            display: inline-block;
+        }
+
+        .wrap-head span{
+            color: rgb(202, 191, 191);
+        }
+
+        .wrap-head a{
+            color: black;
+            text-decoration: none;
+            transition: all .3s;
+        }
+
+        .wrap-head a:hover{
+            text-decoration: none;
+            color: rgb(106, 6, 199)
+        }
+
+        .active-chat{
+            color: #fff !important;
+        }
 
     #frame {
-    width: 95%;
-    min-width: 360px;
-    max-width: 1000px;
-    height: 92vh;
-    min-height: 300px;
-    max-height: 720px;
-    background: #E6EAEA;
+        width: 40%;
+        min-width: 360px;
+        max-width: 1200px;
+        height: 92vh;
+        min-height: 300px;
+        max-height: 600px;
+        background: #9cb3ce;
+        margin-top: 50px;
+        margin-left: 500px;
     }
-    @media screen and (max-width: 360px) {
-    #frame {
-        width: 100%;
-        height: 100vh;
-    }
-    }
-    #frame #sidepanel {
-    float: left;
-    min-width: 280px;
-    max-width: 340px;
-    width: 40%;
-    height: 100%;
-    background: #2c3e50;
-    color: #f5f5f5;
-    overflow: hidden;
-    position: relative;
-    }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel {
-        width: 58px;
-        min-width: 58px;
-    }
-    }
+   
     #frame #sidepanel #profile {
     width: 80%;
     margin: 25px auto;
-    }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #profile {
-        width: 100%;
-        margin: 0 auto;
-        padding: 5px 0 0 0;
-        background: #32465a;
-    }
     }
     #frame #sidepanel #profile.expanded .wrap {
     height: 210px;
@@ -101,11 +93,6 @@
     -webkit-transition: 0.3s height ease;
     transition: 0.3s height ease;
     }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #profile .wrap {
-        height: 55px;
-    }
-    }
     #frame #sidepanel #profile .wrap img {
     width: 50px;
     border-radius: 50%;
@@ -118,12 +105,6 @@
     -o-transition: 0.3s border ease;
     -webkit-transition: 0.3s border ease;
     transition: 0.3s border ease;
-    }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #profile .wrap img {
-        width: 40px;
-        margin-left: 4px;
-    }
     }
     #frame #sidepanel #profile .wrap img.online {
     border: 2px solid #2ecc71;
@@ -141,22 +122,12 @@
     float: left;
     margin-left: 15px;
     }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #profile .wrap p {
-        display: none;
-    }
-    }
     #frame #sidepanel #profile .wrap i.expand-button {
     float: right;
     margin-top: 23px;
     font-size: 0.8em;
     cursor: pointer;
     color: #435f7a;
-    }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #profile .wrap i.expand-button {
-        display: none;
-    }
     }
     #frame #sidepanel #profile .wrap #status-options {
     position: absolute;
@@ -173,21 +144,10 @@
     -webkit-transition: 0.3s all ease;
     transition: 0.3s all ease;
     }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #profile .wrap #status-options {
-        width: 58px;
-        margin-top: 57px;
-    }
-    }
     #frame #sidepanel #profile .wrap #status-options.active {
     opacity: 1;
     visibility: visible;
     margin: 75px 0 0 0;
-    }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #profile .wrap #status-options.active {
-        margin-top: 62px;
-    }
     }
     #frame #sidepanel #profile .wrap #status-options:before {
     content: '';
@@ -199,11 +159,6 @@
     border-bottom: 8px solid #435f7a;
     margin: -8px 0 0 24px;
     }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #profile .wrap #status-options:before {
-        margin-left: 23px;
-    }
-    }
     #frame #sidepanel #profile .wrap #status-options ul {
     overflow: hidden;
     border-radius: 6px;
@@ -212,11 +167,6 @@
     padding: 15px 0 30px 18px;
     display: block;
     cursor: pointer;
-    }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #profile .wrap #status-options ul li {
-        padding: 15px 0 35px 22px;
-    }
     }
     #frame #sidepanel #profile .wrap #status-options ul li:hover {
     background: #496886;
@@ -228,12 +178,6 @@
     border-radius: 50%;
     margin: 5px 0 0 0;
     }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #profile .wrap #status-options ul li span.status-circle {
-        width: 14px;
-        height: 14px;
-    }
-    }
     #frame #sidepanel #profile .wrap #status-options ul li span.status-circle:before {
     content: '';
     position: absolute;
@@ -244,19 +188,8 @@
     border-radius: 50%;
     z-index: 0;
     }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #profile .wrap #status-options ul li span.status-circle:before {
-        height: 18px;
-        width: 18px;
-    }
-    }
     #frame #sidepanel #profile .wrap #status-options ul li p {
     padding-left: 12px;
-    }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #profile .wrap #status-options ul li p {
-        display: none;
-    }
     }
     #frame #sidepanel #profile .wrap #status-options ul li#status-online span.status-circle {
     background: #2ecc71;
@@ -311,11 +244,6 @@
     border-bottom: 1px solid #32465a;
     font-weight: 300;
     }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #search {
-        display: none;
-    }
-    }
     #frame #sidepanel #search label {
     position: absolute;
     margin: 10px 0 0 20px;
@@ -349,12 +277,6 @@
     overflow-y: scroll;
     overflow-x: hidden;
     }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #contacts {
-        height: calc(100% - 149px);
-        overflow-y: scroll;
-        overflow-x: hidden;
-    }
     #frame #sidepanel #contacts::-webkit-scrollbar {
         display: none;
     }
@@ -375,11 +297,6 @@
     font-size: 0.9em;
     cursor: pointer;
     }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #contacts ul li.contact {
-        padding: 6px 0 46px 8px;
-    }
-    }
     #frame #sidepanel #contacts ul li.contact:hover {
     background: #32465a;
     }
@@ -394,11 +311,6 @@
     width: 88%;
     margin: 0 auto;
     position: relative;
-    }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #contacts ul li.contact .wrap {
-        width: 100%;
-    }
     }
     #frame #sidepanel #contacts ul li.contact .wrap span {
     position: absolute;
@@ -425,18 +337,8 @@
     float: left;
     margin-right: 10px;
     }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #contacts ul li.contact .wrap img {
-        margin-right: 0px;
-    }
-    }
     #frame #sidepanel #contacts ul li.contact .wrap .meta {
     padding: 5px 0 0 0;
-    }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #contacts ul li.contact .wrap .meta {
-        display: none;
-    }
     }
     #frame #sidepanel #contacts ul li.contact .wrap .meta .name {
     font-weight: 600;
@@ -478,24 +380,11 @@
     font-size: 0.85em;
     font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
     }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #bottom-bar button {
-        float: none;
-        width: 100%;
-        padding: 15px 0;
-    }
-    }
     #frame #sidepanel #bottom-bar button:focus {
     outline: none;
     }
     #frame #sidepanel #bottom-bar button:nth-child(1) {
     border-right: 1px solid #2c3e50;
-    }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #bottom-bar button:nth-child(1) {
-        border-right: none;
-        border-bottom: 1px solid #2c3e50;
-    }
     }
     #frame #sidepanel #bottom-bar button:hover {
     background: #435f7a;
@@ -504,39 +393,19 @@
     margin-right: 3px;
     font-size: 1em;
     }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #bottom-bar button i {
-        font-size: 1.3em;
-    }
-    }
-    @media screen and (max-width: 735px) {
-    #frame #sidepanel #bottom-bar button span {
-        display: none;
-    }
-    }
+
     #frame .content {
-    float: right;
-    width: 60%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
     }
-    @media screen and (max-width: 735px) {
-    #frame .content {
-        width: calc(100% - 58px);
-        min-width: 300px !important;
-    }
-    }
-    @media screen and (min-width: 900px) {
-    #frame .content {
-        width: calc(100% - 340px);
-    }
-    }
+    
     #frame .content .contact-profile {
     width: 100%;
     height: 60px;
     line-height: 60px;
-    background: #f5f5f5;
+    background: wheat;
     }
     #frame .content .contact-profile img {
     width: 45px;
@@ -562,16 +431,9 @@
     color: #435f7a;
     }
     #frame .content .messages {
-    height: auto;
-    min-height: calc(100% - 93px);
-    max-height: calc(100% - 93px);
-    overflow-y: scroll;
-    overflow-x: hidden;
-    }
-    @media screen and (max-width: 735px) {
-    #frame .content .messages {
-        max-height: calc(100% - 105px);
-    }
+        height: auto;
+        min-height: calc(100% - 93px);
+        max-height: calc(100% - 93px);
     }
     #frame .content .messages::-webkit-scrollbar {
     width: 8px;
@@ -607,7 +469,7 @@
     float: right;
     }
     #frame .content .messages ul li img {
-    width: 45px;
+    width: 40px;
     height: 35px;
     border-radius: 50%;
     float: left;
@@ -619,11 +481,6 @@
     max-width: 205px;
     line-height: 130%;
     }
-    @media screen and (min-width: 735px) {
-    #frame .content .messages ul li p {
-        max-width: 300px;
-    }
-    }
     #frame .content .message-input {
     position: absolute;
     bottom: 0;
@@ -634,18 +491,15 @@
     position: relative;
     }
     #frame .content .message-input .wrap input {
-    font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
-    float: left;
-    border: none;
-    width: calc(100% - 90px);
-    padding: 11px 32px 10px 8px;
-    font-size: 0.8em;
-    color: #32465a;
-    }
-    @media screen and (max-width: 735px) {
-    #frame .content .message-input .wrap input {
-        padding: 15px 32px 16px 8px;
-    }
+        font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
+        float: left;
+        border: none;
+        width: 91%;
+        padding: 11px 32px 10px 8px;
+        font-size: 0.8em;
+        color: #32465a;
+        margin-left: 2.5px;
+        transform: translateY(5px);
     }
     #frame .content .message-input .wrap input:focus {
     outline: none;
@@ -660,12 +514,7 @@
     opacity: .5;
     cursor: pointer;
     }
-    @media screen and (max-width: 735px) {
-    #frame .content .message-input .wrap .attachment {
-        margin-top: 17px;
-        right: 65px;
-    }
-    }
+    
     #frame .content .message-input .wrap .attachment:hover {
     opacity: 1;
     }
@@ -678,11 +527,6 @@
     background: #32465a;
     color: #f5f5f5;
     }
-    @media screen and (max-width: 735px) {
-    #frame .content .message-input .wrap button {
-        padding: 16px 0;
-    }
-    }
     #frame .content .message-input .wrap button:hover {
     background: #435f7a;
     }
@@ -693,27 +537,29 @@
 </head>
 
 <body>
+    @extends('home_page')
+
+    @section('homepage')
+
+    <div class="wrap-head">
+        <p>Thanh điều khiển</p>
+        <span>/</span>
+        <a href="#">Chat</a>
+    </div>
+
     <div id="frame">
-        <div id="sidepanel"></div>
         <div class="content">
             <div class="contact-profile">
                 <img src="{{ Storage::url( Auth::user()->path ) }}" alt="" />
                 <p>{{ Auth::user()->name }}</p>
-                <div class="social-media">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                </div>
             </div>
             <div class="messages">
                 <ul>
-                    
                 </ul>
             </div>
             <div class="message-input">
                 <div class="wrap">
                     <input type="text" placeholder="Write your message..." />
-                    <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
                     <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                 </div>
             </div>
@@ -817,5 +663,7 @@
 
     //# sourceURL=pen.js
     </script>
+
+    @endsection 
 </body>
 </html>

@@ -16,15 +16,15 @@
 
     @section('homepage')
 
+    <div class="wrap-head">
+        <p>Thanh điều khiển</p>
+        <span>/</span>
+        <a href="/admin/info">Thông tin cá nhân</a>
+        <span>/</span>
+        <a href="#">Thông tin học tập</a>
+    </div>
+
     <div class="wrap">
-        <h1>Thông tin học tập cá nhân</h1>
-
-        <div class="line"></div>
-
-        <div class="back-to-view">
-            <a href="/admin/info" class="btn-view">Thông tin cá nhân</a>
-        </div>
-
         <table class="content-table">
             <thead>
                 <tr>
@@ -34,7 +34,6 @@
                     <th>Điểm rèn luyện</th>
                     <th>Khoa</th>
                     <th>Niên khóa</th>
-                    <th>Công cụ</th>
                 </tr>
             </thead>
             <tbody>
@@ -45,13 +44,11 @@
                     <td>{{ $study_detail->point_training }}</td>
                     <td>{{ $study_detail->faculty }}</td>
                     <td>{{ $study_detail->course }}</td>
-                    <td class="tools">
-                        <a href="/admin/info/edit/{{$study_detail->student_id}}" class="tools-link tools-link-edit">
-                            Sửa <i class="fa fa-edit"></i></a>
-                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
+
+    @endsection
 </body>
 </html>

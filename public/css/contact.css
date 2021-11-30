@@ -37,7 +37,98 @@ body{
   .wrap{
     margin-top: 40px;
     margin-left: 300px;
+    display: flex;
   }
+
+form{
+  background-image: linear-gradient(180deg, rgb(164, 164, 235), rgb(112, 112, 223));
+  width: 40%;
+  padding: 20px;
+  text-align: center;
+}
+
+h3{
+  color: #fff;
+}
+
+.label{
+  display: block;
+  color: #fff;
+}
+
+.label1{
+  transform: translateX(-113px);
+  margin-top: 50px;
+}
+
+.label2{
+  transform: translateX(-93px);
+}
+
+.label3{
+  transform: translateX(-85px);
+}
+
+.input{
+  width: 70%;
+  border: none;
+  border-bottom: 1px solid #fff;
+  padding: 10px 10px;
+  background-color: transparent;
+  margin-bottom: 25px;
+  transition: all .15s;
+}
+
+.input:focus{
+  background-color: white;
+}
+
+textarea{
+  width: 70%;
+  height: 160px;
+  padding: 16px 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  transition: all .15s;
+}
+
+textarea:focus{
+  background-color: white;
+}
+
+.submit{
+  display: block;
+  border: none;
+  background-color: rgb(247, 231, 247);
+  text-align: center;
+  width: 70%;
+  padding: 10px 0;
+  margin-top: 25px;
+  margin-left: 68px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  font-size: 17px;
+  color: blue;
+}
+
+.submit:active{
+  border: none;
+}
+
+.content{
+  margin-left: 160px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.content img{
+  width: 100%;
+}
+
+.content p{
+  font-size: 17px;
+}
   
 .active-contact {
   color: #fff !important;

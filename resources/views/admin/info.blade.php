@@ -173,12 +173,6 @@
         function updateInfo() {
             alert("Thay đổi dữ liệu thành công!");
         }
-
-        // window.onload = function()
-        // {
-        //     var dt = document.getElementById("dt");
-        //     dt.value = "hello";
-        // };
     </script>
 
     @endsection

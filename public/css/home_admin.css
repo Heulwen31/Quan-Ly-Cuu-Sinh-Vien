@@ -37,7 +37,7 @@
     padding-left: 10px;
 }
 
-.row2{
+.row2, .row3{
     margin-top: 50px;
 }
 
@@ -136,8 +136,26 @@
 }
 
 .col-feedback::after{
-    content: "Phản hồi \21FE";
+    content: "Báo cáo \21FE";
     background-color: rgb(85, 82, 82);
+}
+
+.col-contact{
+    background-color: rgb(243, 46, 46);
+}
+
+.col-contact::after{
+    content: "Liên hệ \21FE";
+    background-color: rgb(230, 21, 21);
+}
+
+.col-donate{
+    background-color: rgb(190, 20, 190);
+}
+
+.col-donate::after{
+    content: "Ủng hộ \21FE";
+    background-color: rgb(151, 17, 151);
 }
 
 
@@ -189,10 +207,131 @@
     background-color: rgba(85, 82, 82, 0.4);
 }
 
+.col-icon-contact{
+    background-color: rgba(230, 21, 21, 0.55);
+}
+
+.col-icon-donate{
+    background-color: rgba(151, 17, 151, 0.35);
+}
+
 
 /* ----------------- */
 .columns{
     margin-left: 275px;
     margin-top: 120px;
+    margin-bottom: 140px;
+}
+
+
+/* ------------------- */
+.honors{
+    width: 80%;
+    margin-left: 270px;
     margin-bottom: 160px;
+    margin-top: 160px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    height: fit-content;
+    padding: 50px;
+    padding-bottom: 80px;
+    padding-left: 60px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+.honors h1{
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.honors-card{
+    display: flex;
+}
+
+.card-box h3{
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.card-box p{
+    color: gray;
+    font-size: 14px;
+}
+
+.card-box{
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    margin-right: 25px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    transition: all .25s;
+}
+
+.card-box::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    overflow: hidden;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    background-color: #eaeafa;
+    z-index: -10;
+}
+
+.card-box:hover{
+    transform: scale(1.1);
+}
+
+.label1{
+    position: absolute;
+    top: 83.5%;
+    left: 43.5%;
+    color: white;
+    font-size: 20px;
+    z-index: 100;
+}
+
+.box1{
+    background-color: rgb(94, 94, 233);
+}
+
+.box1::after{
+    border-top: 3.5px solid rgb(94, 94, 233);
+}
+
+.box2{
+    background-color: rgb(61, 153, 61);
+}
+
+.box2::after{
+    border-top: 3.5px solid rgb(61, 153, 61);
+}
+
+.box3{
+    background-color: rgb(219, 17, 219);
+}
+
+.box3::after{
+    border-top: 3.5px solid rgb(219, 17, 219);
+}
+
+.box4{
+    background-color: rgb(238, 172, 50);
+}
+
+.box4::after{
+    border-top: 3.5px solid rgb(238, 172, 50);
+}
+
+.card-image{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }

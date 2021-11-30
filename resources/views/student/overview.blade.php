@@ -34,9 +34,50 @@
             <i class="fa fa-paper-plane col-icon col-icon-chat" aria-hidden="true"></i>
         </a>
         <a href="/feedback" class="column col-feedback">
-            <p class="content">Phản hồi</p>
-            <i class="fa fa-comments col-icon col-icon-feedback" aria-hidden="true"></i>
+            <p class="content">Báo cáo</p>
+            <i class="fa fa-exclamation-circle col-icon col-icon-feedback" aria-hidden="true"></i>
         </a>
+    </div>
+
+    <div class="row row2">
+        <a href="/notification" class="column col-contact">
+            <p class="content">Thông báo</p>
+            <i class="fa fa-flag col-icon col-icon-contact" aria-hidden="true"></i>
+        </a>
+        <a href="/donate" class="column col-donate">
+            <p class="content">Ủng hộ</p>
+            <i class="fa fa-donate col-icon col-icon-donate" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <div class="honors">
+        <h1>Vinh danh sinh viên thành tích xuất sắc</h1>
+        <div class="honors-card">
+            <div class="card-box box1">
+                <img src="{{ url('img/male.png') }}" class="card-image" alt="">
+                <h3>Trần Văn Bắc</h3>
+                <p>Khoa công nghệ thông tin</p>
+                <label for="" class="label1">3.82</label>
+            </div>
+            <div class="card-box box2">
+                <img src="{{ url('img/female_color.png') }}" class="card-image" alt="">
+                <h3>Nguyễn Thị Linh</h3>
+                <p>Khoa công nghệ thông tin</p>
+                <label for="" class="label1">3.96</label>
+            </div>
+            <div class="card-box box3">
+                <img src="{{ url('img/knowledge.png') }}" class="card-image" alt="">
+                <h3>Trần Đồng Nam</h3>
+                <p>Khoa công nghệ thông tin</p>
+                <label for="" class="label1">4.00</label>
+            </div>
+            <div class="card-box box4">
+                <img src="{{ url('img/male_color.png') }}" class="card-image" alt="">
+                <h3>Đặng Văn Cường</h3>
+                <p>Khoa công nghệ thông tin</p>
+                <label for="" class="label1">3.91</label>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -49,12 +90,37 @@
         list_col[1].onmouseenter = function() {
             list_icon[1].style.transform = "scale(1.1)"
         }
+        list_col[2].onmouseenter = function() {
+            list_icon[2].style.transform = "scale(1.1)"
+        }
+        list_col[3].onmouseenter = function() {
+            list_icon[3].style.transform = "scale(1.1)"
+        }
+        list_col[4].onmouseenter = function() {
+            list_icon[4].style.transform = "scale(1.1)"
+        }
+        list_col[5].onmouseenter = function() {
+            list_icon[5].style.transform = "scale(1.1)"
+        }
 
+        // 
         list_col[0].onmouseleave = function() {
             list_icon[0].style.transform = "scale(1)"
         }
         list_col[1].onmouseleave = function() {
             list_icon[1].style.transform = "scale(1)"
+        }
+        list_col[2].onmouseleave = function() {
+            list_icon[2].style.transform = "scale(1)"
+        }
+        list_col[3].onmouseleave = function() {
+            list_icon[3].style.transform = "scale(1)"
+        }
+        list_col[4].onmouseleave = function() {
+            list_icon[4].style.transform = "scale(1)"
+        }
+        list_col[5].onmouseleave = function() {
+            list_icon[5].style.transform = "scale(1)"
         }
     </script>
     
