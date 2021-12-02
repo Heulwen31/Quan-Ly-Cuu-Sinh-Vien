@@ -9,6 +9,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ViewAccountController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DonateController;
+use App\Http\Controllers\LocalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -144,3 +145,9 @@ Route::get('contact', [ContactController::class, 'index']);
 Route::post('addcontact', [ContactController::class, 'add']);
 Route::get('notification', [ContactController::class, 'show']);
 Route::delete('/contact/delete/{id}', 'App\Http\Controllers\ContactController@destroy');
+
+
+
+// contact student in the same local
+Route::get('local', [LocalController::class, 'index']);
+Route::post('localcreate', [LocalController::class, 'insert']);
