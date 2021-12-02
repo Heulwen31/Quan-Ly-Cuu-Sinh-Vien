@@ -75,6 +75,7 @@
     <div id="container">
         @foreach($contents as $data)
         <div id="hanoi" class="p-3 mb-2 bg-primary text-white">
+            <a href="delete/{{$data->id}}" class="btn bg-primary" style="float: right;" >&times;</a>
             <img src="" alt="">
             <h1> {{$data->diadiem}} </h1>
             <p> {{$data->noidung}} </p>

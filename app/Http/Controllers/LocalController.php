@@ -24,4 +24,10 @@ class LocalController extends Controller
         DB::table('group')->insert($data);
         return back();
     }
+
+    public function delete($id)
+    {
+        DB::delete('delete from `group` where id = ?', [$id]);
+        return back();
+    }
 }

@@ -151,3 +151,4 @@ Route::delete('/contact/delete/{id}', 'App\Http\Controllers\ContactController@de
 // contact student in the same local
 Route::get('local', [LocalController::class, 'index']);
 Route::post('localcreate', [LocalController::class, 'insert']);
+Route::get('delete/{id}', [LocalController::class, 'delete']);
