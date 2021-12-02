@@ -10,11 +10,9 @@ class LocalController extends Controller
     //
     public function index()
     {
-        $contents = DB::select('SELECT * FROM group');
+        $contents = DB::select('SELECT * FROM `group`');
         return view('local_work')->with('contents', $contents);
     }
-
-
 
     public function insert(Request $request)
     {
