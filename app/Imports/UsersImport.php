@@ -15,7 +15,7 @@ class UsersImport implements ToModel
     */
     public function model(array $row)
     {
-        $isUser = User::where('email', $row[1])->first();
+        $isUser = User::where('email', $row[3] . '@vnu.edu.vn')->first();
 
         if (!$isUser) {
             $user = new User([

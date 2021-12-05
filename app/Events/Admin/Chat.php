@@ -15,15 +15,19 @@ class Chat implements ShouldBroadcast
     use Dispatchable, InteractsWithSockets, SerializesModels;
     
     public $message;
+    public $test;
+    public $path;
 
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct($message)
+    public function __construct($message, $test, $path)
     {
         $this->message = $message;
+        $this->test = $test;
+        $this->path = $path;
     }
 
     /**

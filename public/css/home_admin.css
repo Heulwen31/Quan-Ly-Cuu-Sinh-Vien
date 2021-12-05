@@ -77,12 +77,12 @@
 
 
 /* ---------------COL---------------------- */
-.col-add{
+.col-local{
     background-color: rgb(122, 77, 226);
 }
 
-.col-add::after{
-    content: "Thêm thông tin \21FE";
+.col-local::after{
+    content: "Kết nối cựu sinh viên \21FE";
     background-color: rgb(90, 55, 172);
 }
 
@@ -102,15 +102,6 @@
 .col-forum::after{
     content: "Diễn đàn \21FE";
     background-color: rgb(182, 123, 132);
-}
-
-.col-excel{
-    background-color: rgb(24, 148, 24);
-}
-
-.col-excel::after{
-    content: "Nhập/Xuất file excel \21FE";
-    background-color: rgb(20, 112, 20);
 }
 
 .col-chat{
@@ -178,7 +169,7 @@
     transition: all .1s;
 }
 
-.col-icon-add{
+.col-icon-local{
     background-color: rgba(90, 55, 172, 0.25);
 }
 
@@ -189,10 +180,6 @@
 
 .col-icon-forum{
     background-color: rgba(161, 103, 112, 0.25);
-}
-
-.col-icon-excel{
-    background-color: rgba(20, 112, 20, 0.25);
 }
 
 .col-icon-chat{

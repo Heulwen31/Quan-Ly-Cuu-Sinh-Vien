@@ -17,42 +17,9 @@
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>
     
+    <link rel="stylesheet" type="text/css" href="{{ url('css/chat.css') }}">
+
     <style class="cp-pen-styles">
-
-        .wrap-head{
-            position: absolute;
-            top: 0;
-            left: 16%;
-            font-size: 17px;
-            padding-top: 12px;
-            padding-left: 3px;
-            margin-bottom: 16px;
-        }
-
-        .wrap-head p{
-            color: black;
-            display: inline-block;
-        }
-
-        .wrap-head span{
-            color: rgb(202, 191, 191);
-        }
-
-        .wrap-head a{
-            color: black;
-            text-decoration: none;
-            transition: all .3s;
-        }
-
-        .wrap-head a:hover{
-            text-decoration: none;
-            color: rgb(106, 6, 199)
-        }
-
-        .active-chat{
-            color: #fff !important;
-        }
-
     #frame {
         width: 40%;
         min-width: 360px;
@@ -61,8 +28,8 @@
         min-height: 300px;
         max-height: 600px;
         background: #9cb3ce;
-        margin-top: 50px;
-        margin-left: 500px;
+        margin-left: 20px;
+        border-radius: 10px;
     }
    
     #frame #sidepanel #profile {
@@ -399,6 +366,7 @@
         height: 100%;
         overflow: hidden;
         position: relative;
+        border-radius: 10px;
     }
     
     #frame .content .contact-profile {
@@ -494,11 +462,11 @@
         font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
         float: left;
         border: none;
-        width: 91%;
+        width: 88%;
         padding: 11px 32px 10px 8px;
         font-size: 0.8em;
         color: #32465a;
-        margin-left: 2.5px;
+        margin-left: 4px;
         transform: translateY(5px);
     }
     #frame .content .message-input .wrap input:focus {
@@ -526,6 +494,8 @@
     cursor: pointer;
     background: #32465a;
     color: #f5f5f5;
+    margin-right: 5px;
+    margin-bottom: 5px;
     }
     #frame .content .message-input .wrap button:hover {
     background: #435f7a;
@@ -547,20 +517,32 @@
         <a href="#">Chat</a>
     </div>
 
-    <div id="frame">
-        <div class="content">
-            <div class="contact-profile">
-                <img src="{{ Storage::url( Auth::user()->path ) }}" alt="" />
-                <p>{{ Auth::user()->name }}</p>
-            </div>
-            <div class="messages">
+    <div class="wrap-content">
+        <div class="test">
+            <input type="text" placeholder="Mã sinh viên">
+            <i class="fa fa-user-alt"></i>
+            <div class="line"></div>
+            <div class="test_messages">
                 <ul>
                 </ul>
             </div>
-            <div class="message-input">
-                <div class="wrap">
-                    <input type="text" placeholder="Write your message..." />
-                    <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+        </div>
+
+        <div id="frame">
+            <div class="content">
+                <div class="contact-profile">
+                    <img src="{{ Storage::url( Auth::user()->path ) }}" alt="" />
+                    <p>{{ Auth::user()->name }}</p>
+                </div>
+                <div class="messages">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="message-input">
+                    <div class="wrap">
+                        <input type="text" placeholder="Write your message..." />
+                        <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -571,7 +553,7 @@
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
 
     <script >
-    $(".messages").animate({ scrollTop: $(document).height() }, "fast");
+        $(".messages").animate({ scrollTop: $(document).height() }, "fast");
 
         $("#profile-img").click(function() {
             $("#status-options").toggleClass("active");
@@ -610,7 +592,9 @@
         function newMessage() {
             var formComment = new FormData();
             var message = $('.message-input input').val();
+            var test = $('.test input').val();
             formComment.append('message', message);
+            formComment.append('test', test);
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -626,6 +610,16 @@
                 success: function (response) {
                     $('<li class="sent"><img src="{{ Storage::url( Auth::user()->path ) }}" alt="" /><p>' + response.message + '</p></li>').appendTo($('.messages ul'));
                     $('.message-input input').val(null);
+                    var list_mess = $('.test_messages ul li p');
+                    var check = true;
+                    for (var i = 0; i < list_mess.length; i++) {
+                        if (test == list_mess[i].innerHTML) {
+                            check = false;
+                        }
+                    }
+                    if (check) {
+                        $('<li class="test_sent"><img src="{{ url('img/male_color.png') }}" alt="" /><p>' + response.test + '</p></li>').appendTo($('.test_messages ul'));
+                    }
                 }, 
                 error: function () {
                     alert("Có lỗi xảy ra");
@@ -633,18 +627,22 @@
             });
         };
 
-        $(window).on('keydown', function(e) {
-            if (e.which == 13) {
-                newMessage();
-                return false;
-            }
-        });
+        // $(window).on('keydown', function(e) {
+        //     if (e.which == 13) {
+        //         newMessage();
+        //         return false;
+        //     }
+        // });
 
         $('.submit').click(function (e) {
             e.preventDefault();
             newMessage();
         });
 
+        $('.test input').change(function() {
+            $('.sent').remove();
+            $('.replies').remove();
+        });
 
         // --------------Receive--------------------
         Pusher.logToConsole = true;
@@ -658,7 +656,7 @@
 
         channel.bind('event-chat-client', function (data) {
             $(".messages").animate({scrollTop: $(document).height()}, "fast");
-            $('<li class="replies"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="" /><p>' + data.message + '</p></li>').appendTo($('.messages ul'));
+            $('<li class="replies"><img src="{{ url('img/male_color.png') }}" alt="" /><p>' + data.message + '</p></li>').appendTo($('.messages ul'));
         });
 
     //# sourceURL=pen.js

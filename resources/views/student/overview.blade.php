@@ -40,6 +40,10 @@
     </div>
 
     <div class="row row2">
+        <a href="/local" class="column col-local">
+            <p class="content">Kết nối cựu sinh viên</p>
+            <i class="fa fa-map-marked-alt col-icon col-icon-local" aria-hidden="true"></i>
+        </a>
         <a href="/notification" class="column col-contact">
             <p class="content">Thông báo</p>
             <i class="fa fa-flag col-icon col-icon-contact" aria-hidden="true"></i>
@@ -137,6 +141,9 @@
         list_col[5].onmouseenter = function() {
             list_icon[5].style.transform = "scale(1.1)"
         }
+        list_col[6].onmouseenter = function() {
+            list_icon[6].style.transform = "scale(1.1)"
+        }
 
         // 
         list_col[0].onmouseleave = function() {
@@ -156,6 +163,9 @@
         }
         list_col[5].onmouseleave = function() {
             list_icon[5].style.transform = "scale(1)"
+        }
+        list_col[6].onmouseleave = function() {
+            list_icon[6].style.transform = "scale(1)"
         }
     </script>
     

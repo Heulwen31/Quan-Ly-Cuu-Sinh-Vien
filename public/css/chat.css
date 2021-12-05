@@ -1,0 +1,104 @@
+.wrap-head{
+    position: absolute;
+    top: 0;
+    left: 16%;
+    font-size: 17px;
+    padding-top: 12px;
+    padding-left: 3px;
+    margin-bottom: 16px;
+}
+
+.wrap-head p{
+    color: black;
+    display: inline-block;
+}
+
+.wrap-head span{
+    color: rgb(202, 191, 191);
+}
+
+.wrap-head a{
+    color: black;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.wrap-head a:hover{
+    text-decoration: none;
+    color: rgb(106, 6, 199)
+}
+
+.active-chat{
+    color: #fff !important;
+}
+
+/* ------------------------- */
+.wrap-content{
+    margin-top: 50px;
+    margin-left: 300px;
+    display: flex;
+}
+
+.test{
+    width: 25%;
+    background-color: #6e849e;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.test input{
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.test input::placeholder{
+    font-style: italic;
+    font-size: 15px;
+}
+
+.test i{
+    position: relative;
+    top: -54px;
+    left: 235px;
+    color: black;
+}
+
+.test_sent img{
+    width: 55px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 16px;
+    color: #fff;
+}
+
+.test_sent p{
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    transform: translateY(-5px);
+}
+
+.line{
+    width: 118.5%;
+    height: 2px;
+    background-color: #7993b6;
+    margin-top: -20px;
+    margin-left: -25px;
+    margin-bottom: 3px;
+}
+
+.test_messages ul li{
+    margin-bottom: 10px;
+    padding: 10px 25px;
+    width: 118.6%;
+    margin-left: -25px;
+    transition: all .15s;
+}
+
+.test_messages ul li:hover{
+    background-color: #53667e;
+}

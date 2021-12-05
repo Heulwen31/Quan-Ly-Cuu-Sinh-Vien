@@ -98,6 +98,12 @@
                         </a>
                     </li>
                     <li class="list">
+                        <a href="/localstudent">
+                            <span class="icon active-local"><i class="fa fa-map-marked-alt" aria-hidden="true"></i></span>
+                            <span class="title active-local">Kết nối cựu sinh viên</span>
+                        </a>
+                    </li>
+                    <li class="list">
                         <a href="/notification">
                             <span class="icon active-contact"><i class="fa fa-flag" aria-hidden="true"></i></span>
                             <span class="title active-contact">Thông báo</span>

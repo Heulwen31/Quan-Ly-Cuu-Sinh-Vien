@@ -24,9 +24,11 @@ class ChatController extends Controller
     {
         $data = [
             'message' => $request->message,
+            'test' => $request->test,
+            'path' => auth()->user()->path,
         ];
-        event(new Chat($data['message']));
+        event(new Chat($data['message'], $data['test'], $data['path']));
 
-        return response()->json(['message' => $data['message']], 200);
+        return response()->json(['message' => $data['message'], 'test' => $data['test'], 'path' => $data['path']], 200);
     }
 }

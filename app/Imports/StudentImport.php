@@ -33,7 +33,7 @@ class StudentImport implements ToModel
                 'cccd' => $row[4],
                 'name' => $row[0],
                 'sex' => $row[5],
-                'birth' => $this->transformDate($row[6]),
+                'birth' => $row[6],
                 'email' => $row[1],
                 'phone' => $row[7],
                 'address' => $row[8],

@@ -22,13 +22,6 @@
 
     <div class="wrap-container">
         <div class="form-1">
-            <div class="success-mess">
-                @if(session('status'))
-                    <div class="alert alert-success">
-                        {{ session('status') }}
-                    </div>
-                @endif
-            </div>
             <form method="post" enctype="multipart/form-data" action="/savestudent/{{ Auth::user()->id }}">
                 @method('PATCH')
                 @csrf
@@ -38,10 +31,8 @@
                 </div>
 
                 <div class="wrap-image">
-                    <input type="file" name="image" class="file-input" placeholder="Chọn ảnh">
-                    @error('image')
-                        <div class="alert alert-danger mt-1 mb-1 error-mess">{{ $message }}</div>
-                    @enderror
+                    <input type="file" name="image" class="custom-file-input" id="customFile" onchange='uploadFile(this)'>
+                    <label class="custom-file-label label" for="customFile" id="file-name">Chọn ảnh</label>
                 </div>
                 <div class="wrap-submit-1">
                     <button type="Submit" class="submit">Lưu</button>
@@ -97,6 +88,10 @@
                 mess.className = "";
                 return true;
             }
+        }
+
+        function uploadFile(target) {
+            document.getElementById("file-name").innerHTML = target.files[0].name;
         }
     </script>
     @endsection

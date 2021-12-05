@@ -135,6 +135,15 @@
     background-color: rgb(151, 17, 151);
 }
 
+.col-local{
+    background-color: rgb(122, 77, 226);
+}
+
+.col-local::after{
+    content: "Kết nối cựu sinh viên \21FE";
+    background-color: rgb(90, 55, 172);
+}
+
 
 .content{
     position: absolute;
@@ -177,6 +186,10 @@
 
 .col-icon-donate{
     background-color: rgba(151, 17, 151, 0.35);
+}
+
+.col-icon-local{
+    background-color: rgba(90, 55, 172, 0.25);
 }
 
 /*  */

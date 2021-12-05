@@ -23,10 +23,11 @@ class ContactController extends Controller
     {
         $title = $request->input('title') . "!";
         $content = $request->input('content');
-        $id = $request->input('id');
-        $data = array('title' => $title, 'content' => $content, 'id_author' => $id);
-        DB::table('contacts')->insert($data);
-
+        $id = $request->id;
+        for ($i = 0; $i < count($id); $i++) {
+            $data = array('title' => $title, 'content' => $content, 'id_author' => $id[$i]);
+            DB::table('contacts')->insert($data);
+        }
         return redirect("contact");
     }
 

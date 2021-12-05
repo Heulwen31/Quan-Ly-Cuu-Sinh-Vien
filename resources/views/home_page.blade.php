@@ -69,18 +69,6 @@
                         </a>
                     </li>
                     <li class="list">
-                        <a href="/admin/info/create">
-                            <span class="icon active-add"><i class="fa fa-plus-square" aria-hidden="true"></i></span>
-                            <span class="title active-add">Thêm thông tin</span>
-                        </a>
-                    </li>
-                    <li class="list">
-                        <a href="/file-import-export">
-                            <span class="icon active-ie"><i class="fa fa-file-excel" aria-hidden="true"></i></span>
-                            <span class="title active-ie">Nhập/Xuất file excel</span>
-                        </a>
-                    </li>
-                    <li class="list">
                         <a href="/chart">
                             <span class="icon active-statis"><i class="fa fa-chart-bar" aria-hidden="true"></i></span>
                             <span class="title active-statis">Thống kê</span>
@@ -96,6 +84,12 @@
                         <a href="/forum">
                             <span class="icon active-forum"><i class="fa fa-users" aria-hidden="true"></i></span>
                             <span class="title active-forum">Diễn đàn</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="/local">
+                            <span class="icon active-local"><i class="fa fa-map-marked-alt" aria-hidden="true"></i></span>
+                            <span class="title active-local">Kết nối cựu sinh viên</span>
                         </a>
                     </li>
                     <li class="list">

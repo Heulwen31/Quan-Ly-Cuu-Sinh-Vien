@@ -23,6 +23,30 @@
     </div>
     
     <div class="wrap">
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <form action="{{ route('file-import') }}" method="POST" enctype="multipart/form-data" id="form">
+                    @csrf
+                    <span class="close">&times;</span>
+                    <div class="form-group mb-4" style="max-width: 500px; margin: 0 auto;">
+                        <div class="custom-file text-left">
+                            <input type="file" name="file" class="custom-file-input" id="customFile" onchange='uploadFile(this)'>
+                            <label class="custom-file-label" for="customFile" id="file-name">Chọn file</label>
+                        </div>
+                    </div>
+                    <div class="wrap-excel">
+                        <button class="btn btn-primary">Nhập dữ liệu <i class="fa fa-file-import"></i></button>
+                        <a class="btn btn-success" href="{{ route('file-export') }}">Xuất dữ liệu <i class="fa fa-file-export"></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="head-link">
+            <a href="info/create" class="btn btn-outline-primary">Thêm thông tin <i class="fa fa-plus-circle"></i></a>
+            <button class="btn btn-outline-success" id="myBtn">Nhập/Xuất excel <i class="fa fa-file-excel"></i></button>
+        </div>
+
         <table class="content-table">
             <thead>
                 <tr>
@@ -42,49 +66,49 @@
                     <td>
                         <form action="/search1" method="post">
                             @csrf
-                            <input type="text" name="searchid" class="input-search search-id">
+                            <input type="text" name="searchid" class="input-search search-id" placeholder="Tìm kiếm">
                         </form>
                     </td>
                     <td>
                         <form action="/search2" method="post">
                             @csrf
-                            <input type="text" name="searchname" class="input-search search-name">
+                            <input type="text" name="searchname" class="input-search search-name" placeholder="Tìm kiếm">
                         </form>
                     </td>
                     <td>
                         <form action="/search3" method="post">
                             @csrf
-                            <input type="text" name="searchemail" class="input-search search-email">
+                            <input type="text" name="searchemail" class="input-search search-email" placeholder="Tìm kiếm">
                         </form>
                     </td>
                     <td>
                         <form action="/search4" method="post">
                             @csrf
-                            <input type="text" name="searchsex" class="input-search search-sex">
+                            <input type="text" name="searchsex" class="input-search search-sex" placeholder="Tìm kiếm">
                         </form>
                     </td>
                     <td>
                         <form action="/search5" method="post">
                             @csrf
-                            <input type="text" name="searchbirth" class="input-search search-birth">
+                            <input type="text" name="searchbirth" class="input-search search-birth" placeholder="Tìm kiếm">
                         </form>
                     </td>
                     <td>
                         <form action="/search6" method="post">
                             @csrf
-                            <input type="text" name="searchphone" class="input-search search-phone">
+                            <input type="text" name="searchphone" class="input-search search-phone" placeholder="Tìm kiếm">
                         </form>
                     </td>
                     <td>
                         <form action="/search7" method="post">
                             @csrf
-                            <input type="text" name="searchaddress" class="input-search search-address">
+                            <input type="text" name="searchaddress" class="input-search search-address" placeholder="Tìm kiếm">
                         </form>
                     </td>
                     <td>
                         <form action="/search8" method="post">
                             @csrf
-                            <input type="text" name="searchjob" class="input-search search-job">
+                            <input type="text" name="searchjob" class="input-search search-job" placeholder="Tìm kiếm">
                         </form>
                     </td>
                     <td></td>
@@ -172,6 +196,30 @@
 
         function updateInfo() {
             alert("Thay đổi dữ liệu thành công!");
+        }
+
+        var modal = document.getElementById("myModal");
+
+        var btn = document.getElementById("myBtn");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        function uploadFile(target) {
+            document.getElementById("file-name").innerHTML = target.files[0].name;
         }
     </script>
 

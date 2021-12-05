@@ -56,8 +56,8 @@ body{
 
 .content-table th,
 .content-table td {
-    padding: 15px 15px;
-    width: 160px;
+    padding: 15px 10px;
+    width: 157px;
     border-right: 1px solid rgba(0, 0, 0, 0.3);
 }
 

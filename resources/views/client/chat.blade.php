@@ -657,8 +657,10 @@ outline: none;
         var channel = pusher.subscribe('chat-with-client');
 
         channel.bind('event-chat-admin', function (data) {
-            $(".messages").animate({scrollTop: $(document).height()}, "fast");
-            $('<li class="replies"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="" /><p>' + data.message + '</p></li>').appendTo($('.messages ul'));
+            if ({{ Auth::user()->id_student }} == data.test) {
+                $(".messages").animate({scrollTop: $(document).height()}, "fast");
+                $('<li class="replies"><img src="{{ url('img/male_color.png') }}" alt="" /><p>' + data.message + '</p></li>').appendTo($('.messages ul'));
+            }
         });
 
 //# sourceURL=pen.js

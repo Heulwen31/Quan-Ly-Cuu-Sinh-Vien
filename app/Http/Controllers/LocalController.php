@@ -7,7 +7,12 @@ use Illuminate\Support\Facades\DB;
 
 class LocalController extends Controller
 {
-    //
+    
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $contents = DB::select('SELECT * FROM `group`');
@@ -29,5 +34,11 @@ class LocalController extends Controller
     {
         DB::delete('delete from `group` where id = ?', [$id]);
         return back();
+    }
+
+    public function indexStudent()
+    {
+        $contents = DB::select('SELECT * FROM `group`');
+        return view('local_student')->with('contents', $contents);
     }
 }

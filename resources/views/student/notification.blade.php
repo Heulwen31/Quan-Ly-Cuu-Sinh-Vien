@@ -39,6 +39,14 @@
         </div>
         @endforeach 
     </div>
+
+    <script>
+        function confirmDel() {
+            if (!confirm("Bạn có muốn xóa không?")) {
+                return false;
+            }
+        }
+    </script>
     
     @endsection
 </body>

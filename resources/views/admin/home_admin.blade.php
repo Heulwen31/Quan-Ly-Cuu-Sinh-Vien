@@ -23,10 +23,6 @@
     </div>
 
     <div class="row">
-        <a href="/admin/info/create" class="column col-add">
-            <p class="content">Thêm thông tin</p>
-            <i class="fa fa-plus-square col-icon col-icon-add" aria-hidden="true"></i>
-        </a>
         <a href="/admin/info" class="column col-view">
             <p class="content">Thông tin cựu sinh viên</p>
             <i class="fa fa-list-alt col-icon col-icon-view" aria-hidden="true"></i>
@@ -35,13 +31,6 @@
             <p class="content">Diễn đàn</p>
             <i class="fa fa-users col-icon col-icon-forum" aria-hidden="true"></i>
         </a>
-        <a href="/file-import-export" class="column col-excel">
-            <p class="content">Nhập/Xuất file excel</p>
-            <i class="fa fa-file-excel col-icon col-icon-excel" aria-hidden="true"></i>
-        </a>
-    </div>
-
-    <div class="row row2">
         <a href="/admin/chat" class="column col-chat">
             <p class="content">Chat</p>
             <i class="fa fa-paper-plane col-icon col-icon-chat" aria-hidden="true"></i>
@@ -49,6 +38,13 @@
         <a href="/chart" class="column col-statis">
             <p class="content">Thống kê</p>
             <i class="fa fa-chart-bar col-icon col-icon-statis" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <div class="row row2">
+        <a href="/local" class="column col-local">
+            <p class="content">Kết nối cựu sinh viên</p>
+            <i class="fa fa-map-marked-alt col-icon col-icon-local" aria-hidden="true"></i>
         </a>
         <a href="/receive-fb" class="column col-feedback">
             <p class="content">Báo cáo</p>
@@ -58,14 +54,12 @@
             <p class="content">Liên hệ</p>
             <i class="fa fa-flag col-icon col-icon-contact" aria-hidden="true"></i>
         </a>
-    </div>
-
-    <div class="row row3">
         <a href="/listdonate" class="column col-donate">
             <p class="content">Ủng hộ</p>
             <i class="fa fa-donate col-icon col-icon-donate" aria-hidden="true"></i>
         </a>
     </div>
+
 
     <div class="honors">
         <h1>Vinh danh sinh viên thành tích xuất sắc</h1>
@@ -160,9 +154,6 @@
         list_col[7].onmouseenter = function() {
             list_icon[7].style.transform = "scale(1.1)"
         }
-        list_col[8].onmouseenter = function() {
-            list_icon[8].style.transform = "scale(1.1)"
-        }
 
         // 
         list_col[0].onmouseleave = function() {
@@ -188,97 +179,6 @@
         }
         list_col[7].onmouseleave = function() {
             list_icon[7].style.transform = "scale(1)"
-        }
-        list_col[8].onmouseleave = function() {
-            list_icon[8].style.transform = "scale(1)"
-        }
-
-        google.charts.load('current', {
-            'packages': ['corechart']
-        });
-
-        // Draw the pie chart for Sarah's pizza when Charts is loaded.
-        google.charts.setOnLoadCallback(drawSarahChart);
-
-        // Draw the pie chart for the Anthony's pizza when Charts is loaded.
-        google.charts.setOnLoadCallback(drawAnthonyChart);
-
-        // Callback that draws the pie chart for Sarah's pizza.
-        function drawSarahChart() {
-            // Get the data from database
-            var below_average = <?php echo json_encode($below_average); ?>;
-            var average = <?php echo json_encode($average); ?>;
-            var good = <?php echo json_encode($good); ?>;
-            var excellent = <?php echo json_encode($excellent) ?>;
-
-            // Create the data table for Sarah's pizza.
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Topping');
-            data.addColumn('number', 'Slices');
-            data.addRows([
-                ['Trung bình', below_average],
-                ['Khá', average],
-                ['Giỏi', good],
-                ['Xuất sắc', excellent],
-            ]);
-
-            // Set options for Sarah's pie chart.
-            var options = {
-                title: 'Thống kê số lượng xếp hạng sinh viên',
-                width: 550,
-                height: 600
-            };
-
-            // Instantiate and draw the chart for Sarah's pizza.
-            var chart = new google.visualization.PieChart(document.getElementById('Sarah_chart_div'));
-            chart.draw(data, options);
-        }
-
-        // Callback that draws the pie chart for Anthony's pizza.
-        function drawAnthonyChart() {
-
-            var below_average = <?php echo json_encode($below_average); ?>;
-            var average = <?php echo json_encode($average); ?>;
-            var good = <?php echo json_encode($good); ?>;
-            var excellent = <?php echo json_encode($excellent) ?>;
-
-
-            var data = google.visualization.arrayToDataTable([
-                ["Element", "Density", {
-                    role: "style"
-                }],
-                ["Excellent", excellent, "#b87333"],
-                ["Good", good, "silver"],
-                ["Average", average, "gold"],
-                ["Below Average", below_average, "color: #e5e4e2"]
-            ]);
-
-            var view = new google.visualization.DataView(data);
-            view.setColumns([0, 1,
-                {
-                    calc: "stringify",
-                    sourceColumn: 1,
-                    type: "string",
-                    role: "annotation"
-                },
-                2
-            ]);
-
-            var options = {
-                title: "Thống kê số lượng xếp hạng sinh viên",
-                width: 650,
-                height: 600,
-                bar: {
-                    groupWidth: "95%"
-                },
-                legend: {
-                    position: "none"
-                },
-            };
-            var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
-            chart.draw(view, options);
-
-            
         }
     </script>
 
