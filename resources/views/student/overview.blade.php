@@ -40,7 +40,7 @@
     </div>
 
     <div class="row row2">
-        <a href="/local" class="column col-local">
+        <a href="/localstudent" class="column col-local">
             <p class="content">Kết nối cựu sinh viên</p>
             <i class="fa fa-map-marked-alt col-icon col-icon-local" aria-hidden="true"></i>
         </a>

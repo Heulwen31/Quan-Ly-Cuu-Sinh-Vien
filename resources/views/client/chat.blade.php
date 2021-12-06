@@ -559,7 +559,7 @@ outline: none;
             </div>
             <div class="message-input">
                 <div class="wrap">
-                    <input type="text" placeholder="Write your message..." />
+                    <input type="text" placeholder="Nhập lời nhắn của bạn..." />
                     <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button> 
                 </div>
             </div>

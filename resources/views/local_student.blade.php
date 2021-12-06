@@ -115,7 +115,7 @@
         @foreach($contents as $data)
         <div id="hanoi" class="p-3 mb-2 bg-primary text-white">
             <img src="" alt="">
-            <h1> {{$data->diadiem}} </h1>
+            <h1 style="font-size: 2rem;"> {{$data->diadiem}} </h1>
             <p> {{$data->noidung}} </p>
             <a href="{{$data->link}}" class="btn btn-light">Đi tới</a>
         </div>
